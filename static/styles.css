@@ -194,7 +194,7 @@ input, select, button {
 .big-box-form {
     /* width: 100%;        takes full width of parent container */
     max-width: 1200px;  /* make it wider, adjust as needed */
-    height: 700px;      /* keep height as before or adjust */
+    height: 750px;      /* keep height as before or adjust */
     padding: 15px;
     overflow: hidden;
     border-radius: 12px;
