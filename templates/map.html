@@ -1,0 +1,198 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<section class="hero-section">
+  <div class="title-box">
+    <h1>HEALTH ACCESS MAP</h1>
+    <p>Find hospitals near you instantly</p>
+  </div>
+  <p class="subtext">A Congressional App Challenge 2025</p>
+</section>
+
+
+<section class="content-section" id="content">
+  <div class="form-box">
+    <h2>🌍 Find Nearby Hospitals</h2>
+    <form action="{{ url_for('search_location') }}" method="POST" id="searchForm">
+      <label for="zip">ZIP Code</label>
+      <input type="text" id="zip" name="zip" placeholder="Enter ZIP code" required>
+
+      <label for="country">Country</label>
+      <input type="text" id="country" name="country" placeholder="Enter country" required>
+
+      <button type="submit">Search</button>
+    </form>
+  </div>
+
+
+  {% if map_file or hospitals %}
+  <div class="hospital-map-section">
+    {% if hospitals %}
+    <div class="hospital-list-text">
+      <h3>Nearby Hospitals</h3>
+      {% for h in hospitals %}
+        <p>🏥 {{ h.name }}</p>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    {% if map_file %}
+    <div class="map-fullscreen">
+      <iframe src="{{ map_file }}" width="100%" height="800px" style="border:none;"></iframe>
+    </div>
+    {% endif %}
+  </div>
+  {% endif %}
+</section>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("searchForm");
+
+  if (form) {
+    form.addEventListener("submit", () => {
+      setTimeout(() => {
+        const results = document.querySelector(".hospital-map-section");
+        if (results) {
+          results.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }, 1000); 
+    });
+  }
+});
+</script>
+
+
+<style>
+
+.hero-section {
+  height: 100vh;
+  background: url("{{ url_for('static', filename='map_bg.png') }}") center / cover no-repeat fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.title-box {
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  padding: 20px 40px;
+  text-align: center;
+  font-family: 'Times New Roman', serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+.title-box h1 {
+  font-size: 2em;
+  margin: 0;
+  font-weight: bold;
+}
+.title-box p {
+  margin-top: 6px;
+  font-size: 0.9em;
+  opacity: 0.85;
+  text-transform: none;
+  font-family: 'Georgia', serif;
+}
+
+
+.subtext {
+  color: white;
+  font-family: 'Georgia', serif;
+  font-size: 1.3em;
+  opacity: 0.9;
+  margin-top: 10px;
+  margin-left: -140px;
+  text-align: left;
+}
+
+
+.content-section {
+  background: #f9fafb;
+  padding: 80px 20px 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form-box {
+  background: #ffffff;
+  color: #1f2937;
+  border-radius: 20px;
+  padding: 50px 60px;
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+.form-box input {
+  width: 80%;
+  padding: 12px 15px;
+  margin: 10px 0 20px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  outline: none;
+}
+.form-box button {
+  background: #4f46e5;
+  color: #ffffff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.form-box button:hover {
+  background: #6366f1;
+}
+
+
+.hospital-map-section {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+  max-width: 1400px;
+  margin: 60px auto 0;
+  align-items: flex-start;
+}
+.hospital-list-text {
+  flex: 1;
+  color: #1e293b;
+  font-weight: 500;
+  font-size: 16px;
+}
+.hospital-list-text h3 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #1e3a8a;
+  margin-bottom: 15px;
+}
+.hospital-list-text p {
+  margin-bottom: 12px;
+  font-size: 16px;
+  color: #1f2937;
+}
+
+
+.map-fullscreen {
+  flex: 2;
+  height: 800px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+
+@media (max-width: 768px) {
+  .hospital-map-section { flex-direction: column; }
+  .map-fullscreen { width: 100%; height: 500px; }
+  .hospital-list-text { text-align: center; margin-bottom: 20px; }
+  .subtext { margin-left: 0; text-align: center; }
+}
+</style>
+
+{% endblock %}

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Health Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+       .container {
+  background: transparent;
+  box-shadow: none;
+  border: none;
+}
+
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover { background-color: #0056b3; }
+
+        .row-flex { display: flex; gap: 10px; flex-wrap: wrap; }
+        .half { flex: 1; }
+
+        .disease-card-window {
+            max-height: 400px;
+            overflow-y: auto;
+            background: #f3f4f6;
+            border-radius: 12px;
+            border: 1px solid #e5e7eb;
+            padding: 10px 0;
+            margin-bottom: 20px;
+        }
+
+        .animated-header {
+            animation: fadeInDown 1.2s cubic-bezier(.42,0,.58,1);
+            position: relative;
+        }
+
+        @keyframes fadeInDown {
+            0% { opacity: 0; transform: translateY(-40px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .disease-card-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .disease-card {
+            display: block;
+            cursor: pointer;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            background: #f9fafb;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            transition: transform 0.25s cubic-bezier(.42,0,.58,1), box-shadow 0.25s;
+            width: 120px;
+            text-align: center;
+            padding: 18px 10px 12px 10px;
+            position: relative;
+        }
+
+        .disease-card:hover {
+            transform: scale(1.07) translateY(-6px);
+            box-shadow: 0 8px 24px rgba(13,148,136,0.12);
+            border-color: #0d9488;
+        }
+
+        .disease-card input[type="checkbox"]:checked ~ .card-content {
+            box-shadow: 0 0 0 4px #0d9488, 0 4px 16px rgba(13,148,136,0.08);
+            border-radius: 12px;
+        }
+
+        .card-content { display: flex; flex-direction: column; align-items: center; }
+        .disease-card.selected { border-color: #007bff; background-color: #e6f0ff; }
+        .disease-img { width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 10px; }
+        .disease-name { font-size: 1.1rem; color: #0d9488; font-weight: 600; margin-bottom: 4px; }
+        #other-race-input, #other-sex-input { display: none; }
+        .half-name-box { flex: 2; }   
+        .half-age-box  { flex: 0.4; } 
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>🧑‍⚕️ Health Info Form</h1>
+    <form action="{{ url_for('health_form') }}" method="POST">
+        <div class="row-flex">
+            <div class="half-name-box">
+                <label>Full Name</label>
+                <input type="text" name="name" required>
+            </div>
+            <div class="half-age-box">
+                <label>Age</label>
+                <input type="number" name="age" min="0" max="120" required>
+            </div>
+        </div>
+
+        <div class="row-flex">
+            <div class="half">
+                <label>Weight (kg)</label>
+                <input type="number" name="weight" min="0" step="0.1" required>
+            </div>
+            <div class="half">
+                <label>Height (cm)</label>
+                <input type="number" name="height" min="30" max="250" step="0.1" required>
+            </div>
+        </div>
+
+        <div class="row-flex">
+            <div class="half">
+                <label>Sex</label>
+                <select name="sex" id="sex-select" required>
+                    <option value="" disabled selected>Select your sex</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+                <input type="text" id="other-sex-input" name="other_sex" placeholder="Please specify">
+            </div>
+            <div class="half">
+                <label>Race</label>
+                <select name="race" id="race-select" required>
+                    <option value="" disabled selected>Select your race</option>
+                    <option value="Asian">Asian</option>
+                    <option value="White">White</option>
+                    <option value="Black or African American">Black or African American</option>
+                    <option value="Hispanic or Latino">Hispanic or Latino</option>
+                    <option value="Native American or Alaska Native">Native American or Alaska Native</option>
+                    <option value="Native Hawaiian or Pacific Islander">Native Hawaiian or Pacific Islander</option>
+                    <option value="Mixed">Mixed</option>
+                    <option value="Other">Other</option>
+                </select>
+                <input type="text" id="other-race-input" name="other_race" placeholder="Please specify">
+            </div>
+        </div>
+
+        <label>Disease</label>
+        <input type="text" id="disease-search" placeholder="Search disease...">
+        <div class="disease-card-window">
+            <div class="disease-card-grid" id="disease-card-grid">
+                {% for d in diseases %}
+                <label class="disease-card {% if d=='Diabetes' %}selected{% endif %}">
+                    <input type="checkbox" name="disease" value="{{ d }}" hidden {% if d=='Diabetes' %}checked{% endif %}>
+                    <div class="card-content">
+                        <img src="{{ url_for('static', filename='img/disease/' + (d|lower|replace(' ', '_') + '.jpg')) }}" alt="{{ d }}" class="disease-img">
+                        <span class="disease-name">{{ d }}</span>
+                    </div>
+                </label>
+                {% endfor %}
+            </div>
+        </div>
+
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<script>
+    document.getElementById('sex-select').addEventListener('change', function() {
+        const other = document.getElementById('other-sex-input');
+        other.style.display = this.value === "Other" ? "block" : "none";
+        other.required = this.value === "Other";
+    });
+
+    document.getElementById('race-select').addEventListener('change', function() {
+        const other = document.getElementById('other-race-input');
+        other.style.display = this.value === "Other" ? "block" : "none";
+        other.required = this.value === "Other";
+    });
+
+    document.getElementById('disease-search').addEventListener('input', function() {
+        const query = this.value.toLowerCase();
+        document.querySelectorAll('.disease-card').forEach(card => {
+            const name = card.querySelector('.disease-name').textContent.toLowerCase();
+            card.style.display = name.includes(query) ? '' : 'none';
+        });
+    });
+
+    document.querySelectorAll('.disease-card').forEach(card => {
+        card.addEventListener('click', function() {
+            const checkbox = this.querySelector('input[type="checkbox"]');
+            checkbox.checked = !checkbox.checked;
+            this.classList.toggle('selected', checkbox.checked);
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,354 @@
+
+:root {
+  --bg1: #e6f0ff;
+  --bg2: #b8d4ff;
+  --brand: #3b82f6;
+  --bg: linear-gradient(180deg, var(--bg1), var(--bg2));
+  --card: #ffffff;
+  --border: #e6e9ef;
+  --muted: #6b7280;
+  --text: #0f172a;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;  
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans';
+  color: var(--text); 
+  background: var(--bg);
+  padding:0;
+  background: transparent;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover
+} 
+
+/* Topbar */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 16px;
+  border-bottom: 1px solid var(--border);
+  background: #072ec9cc;
+  backdrop-filter: blur(6px);
+  color: white;
+}
+.brand { display:flex; align-items:center; gap:40px; color:inherit; text-decoration:none }
+.logo { width:144px; height:144px; border-radius:6px; overflow:hidden; display:inline-flex; align-items:center; justify-content:center }
+.logo img { width:100%; height:100%; object-fit:cover; display:block }
+.title { font-weight:700; font-size:40px }
+.icon-btn { font-size:20px; width:40px; height:40px; border-radius:8px; border:1px solid var(--border); background:transparent; cursor:pointer }
+.icon-btn:focus { outline:2px solid var(--brand); outline-offset:2px }
+
+/* Mobile sidebar */
+.sidebar { position:fixed; left:0; top:56px; bottom:0; width:240px; transform:translateX(-100%); transition:transform .2s ease; border-right:1px solid var(--border); background:rgba(255,255,255,0.95); padding-bottom:16px }
+.sidebar.open { transform:translateX(0) }
+.sidebar-header { padding:14px 16px; font-weight:600; color:var(--muted) }
+.sidebar .item { display:block; padding:12px 16px; text-decoration:none; color:inherit }
+.sidebar .item:hover { background:var(--card) }
+.sidebar .item.active { background:#eef2ff; color:#ffffff; font-weight:600 }
+
+/* Content */
+.page-section { margin-top:16px }
+.page-section h1 { margin-top:0; font-size:28px }
+
+
+
+/* Desktop: place menu top-right inside topbar */
+@media (min-width:1024px) {
+  .sidebar {
+    transform:none;
+    position:fixed;
+    right:16px;
+    top:12px;
+    height:56px;
+    width:auto;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding:0 12px;
+    background:transparent 
+  }
+  .sidebar-header { display:none }
+  .sidebar .item { display:inline-block; padding:10px 12px; border-radius:8px; margin-left:6px; font-size:40px; color: white; }
+  .sidebar .item:hover { background:rgba(0,0,0,0.03) }
+  .topbar { padding-right:220px }
+  .content { margin-top:56px }
+  .icon-btn { display:none }
+
+  .page-section {
+    margin-top: 16px;
+  }
+  .page-section h1 {
+    margin-top: 0;
+    font-size: 28px;
+  }
+}
+/* Utilities */
+.span-2 {
+  grid-column: span 2;
+}
+
+/* Responsive */
+@media (min-width: 1024px) {
+  /* Desktop: place the nav in the top-right corner */
+  .sidebar {
+    transform: none;
+    position: fixed;
+    left: auto;
+    top: 10px;
+    height: 56px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    white-space: nowrap; /* prevent wrapping */
+    border-right: none;
+    border-bottom: none;
+    background: transparent;
+    box-shadow: none;
+    z-index: 60; /* keep above content */
+  }
+  .sidebar.open {
+    transform: none;
+  }
+  .sidebar-header {
+    display: none;
+  }
+  .sidebar .item {
+    display: inline-block;
+    padding: 10px 12px;
+    border-radius: 8px;
+    margin: 0px;
+  }
+  .sidebar .item:hover {
+    background: rgba(0, 0, 0, 0.03);
+  }
+
+  /* Give the topbar extra right padding so the brand doesn't overlap the top-right menu */
+  .topbar {
+    padding-left: 16px;
+    padding-right: 240px; /* reserve enough space for the top-right menu */
+  }
+
+  /* Content: account for top nav height */
+  .content {
+    margin-left: 0;
+    margin-top: 0px;
+  }
+  .icon-btn {
+    display: none;
+  }
+
+  .team-container {
+      display: flex;
+      justify-content: center; /* Centers cards if there are fewer than 3 */
+      gap: 30px; /* Adds space between cards */
+      /* flex-wrap: wrap; Allows cards to wrap to the next line on smaller screens */
+      
+  }
+}
+
+@media (max-width: 640px) {
+  .grid { grid-template-columns: 1fr; }
+  .span-2 { grid-column: auto; }
+  .gallery { grid-template-columns: 1fr 1fr; }
+}
+
+
+footer {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.6);
+  border-top: 1px solid var(--border);
+  margin: 42px auto 0 auto;
+  /* margin-right: 400px; */
+  position: relative; 
+}
+
+/* Inside static/style.css */
+
+input, select, button {
+    width: 100%;
+}
+
+.row-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.row-flex .half {
+    flex: 1;
+    min-width: 150px;
+}
+
+
+
+
+.big-box-form {
+    /* width: 100%;        takes full width of parent container */
+    max-width: 1200px;  /* make it wider, adjust as needed */
+    height: 700px;      /* keep height as before or adjust */
+    padding: 15px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+    margin-top: 12px;
+    border: 2px dashed var(--border);
+    background: var(--card);
+    margin: 0 auto;
+}
+
+/* Scrollable inner container */
+.form-scroll {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;   /* vertical scroll if content is too tall */
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+/* Make form elements flexible */
+.form-scroll .container,
+.form-scroll input,
+.form-scroll select,
+.form-scroll button {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-scroll .row-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.form-scroll .row-flex .half {
+    flex: 1;
+    min-width: 150px;
+}
+
+/* Disease cards */
+.form-scroll .disease-card-window {
+    max-height: 250px;
+    overflow-y: auto;  /* vertical scroll only */
+    overflow-x: hidden;
+}
+
+.form-scroll .disease-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+}
+
+
+/* ABOUT US */
+
+/* Basic page styling */
+
+/* Main container for centering content */
+.team-big-container {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+
+/* Page title */
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #2c3e50;
+}
+
+/* Container for the flexbox cards */
+.team-container {
+    display: flex;
+    justify-content: center; /* Centers cards if there are fewer than 3 */
+    gap: 30px; /* Adds space between cards */
+    flex-wrap: wrap; /* Allows cards to wrap to the next line on smaller screens */
+}
+
+/* Individual team card styling */
+.team-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    width: 320px;
+    margin-bottom: 20px;
+    padding: 25px;
+    box-sizing: border-box; /* Ensures padding doesn't affect the width */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Adds a slight lift effect on hover */
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.team-card h3 {
+    font-size: 1.5rem;
+    color: #34495e;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.team-card .quote {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    border-left: 4px solid #3498db; /* A nice blue accent for the quote */
+}
+
+.team-card .intro {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+/* Contact info list styling */
+.contact-info {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.contact-info li {
+    margin-bottom: 10px;
+    color: #444;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info li strong {
+    margin-right: 8px;
+    color: #333;
+    flex-shrink: 0; /* Prevents "Email:" from wrapping */
+}
+
+.contact-info a {
+    color: #3498db;
+    text-decoration: none;
+    word-break: break-all; /* Helps long emails/links wrap nicely */
+}
+
+.contact-info a:hover { text-decoration: underline; }
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;     /* This makes the image circular */
+    object-fit: cover;      /* Prevents the image from stretching */
+    border: 3px solid #eee; /* Optional: adds a light border */
+    margin-bottom: 15px;    /* Adds space below the image */
+}

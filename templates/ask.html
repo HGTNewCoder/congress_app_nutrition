@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="hero-section">
+  <div class="title-box">
+    <h1>PERSONAL HEALTH ASSESSMENT</h1>
+    <p class="subtitle">Analyze your wellness in one click</p>
+  </div>
+  <p class="subtext">A Congressional App Challenge 2025</p>
+</section>
+
+<section class="page-section">
+  <div class="big-box-form revealable">
+    <div class="form-scroll">
+      {% include 'index.html' %}
+    </div>
+  </div>
+</section>
+
+<style>
+.hero-section {
+  height: 100vh;
+  background: url("{{ url_for('static', filename='img/ask_bg.png') }}") center / cover no-repeat fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title-box {
+  background: rgba(0, 0, 0, 0.9);
+  color: #ffffff;
+  padding: 25px 50px;
+  text-align: center;
+  font-family: 'Times New Roman', serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.title-box h1 {
+  font-size: 2em;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+.subtitle {
+  font-size: 1.9em;
+  font-family: 'Georgia', serif;
+  text-transform: none;
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+.subtext {
+  color: white;
+  font-family: 'Georgia', serif;
+  font-size: 1.3em;
+  opacity: 0.9;
+  margin-top: 10px;
+  margin-left: -340px; 
+  text-align: left;
+}
+
+.page-section {
+  background: #ffffff;
+  padding: 60px 0;
+  min-height: 100vh;
+}
+
+.revealable {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+}
+.revealable.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+
+<script>
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('in-view');
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.15 });
+
+document.querySelectorAll('.revealable').forEach(el => io.observe(el));
+</script>
+
+{% endblock %}

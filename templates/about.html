@@ -1,0 +1,181 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<section aria-labelledby="team-title" class="page-section team-section">
+  <div class="team-big-container">
+
+    <h2 id="team-title" class="team-heading">Meet Our Team</h2>
+
+    <div class="team-container">
+
+      <div class="team-card">
+        <img src="{{ url_for('static', filename='img/thinh.jpg') }}" alt="Thinh" class="profile-pic">
+        <h3>Thinh Ha</h3>
+        <p class="quote">"Passion is the genesis of genius"</p>
+        <p class="intro">
+          Jogging builds focus and discipline. Math fuels curiosity and the dream of reaching MIT.
+        </p>
+        <ul class="contact-info">
+          <li><strong>Email:</strong> <a href="mailto:thinh.hagia22@gmail.com">thinh.hagia22@gmail.com</a></li>
+          <li><strong>Phone:</strong> +1 714-844-5557</li>
+          <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/thinh-ha-904890335" target="_blank">thinh-ha-904890335</a></li>
+        </ul>
+      </div>
+
+ 
+      <div class="team-card">
+        <img src="{{ url_for('static', filename='img/kha.jpg') }}" alt="Kha" class="profile-pic">
+        <h3>Kha Hoang</h3>
+        <p class="quote">“Curiosity is the wick in the candle of learning”</p>
+        <p class="intro">
+          Attending the challenge is my way of proving to my family that I can do this. My dream school is Stanford.
+        </p>
+        <ul class="contact-info">
+          <li><strong>Email:</strong> <a href="mailto:mkha4622@gmail.com">mkha4622@gmail.com</a></li>
+          <li><strong>Phone:</strong> +1 657-281-8924</li>
+          <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/minh-kha-b60892337" target="_blank">minh-kha-b60892337</a></li>
+        </ul>
+      </div>
+
+
+      <div class="team-card">
+        <img src="{{ url_for('static', filename='img/sam.jpg') }}" alt="Duong" class="profile-pic">
+        <h3>Duong Le</h3>
+        <p class="quote">“The more I learn, the more I realize how much I do not know”</p>
+        <p class="intro">
+          I'm interested in doing experiment and Passionate about learning new things
+        </p>
+        <ul class="contact-info">
+          <li><strong>Email:</strong> <a href="mailto:thaiduongle2008@gmail.com">thaiduongle2008@gmail.com</a></li>
+          <li><strong>Phone:</strong> +1 714-592-9993</li>
+          <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/duong-le-a985b0390" target="_blank">duong-le-a985b0390</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<script>
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add('in-view');
+      io.unobserve(e.target);
+    }
+  })
+},{threshold:0.15});
+document.querySelectorAll('.revealable').forEach(el=>io.observe(el));
+</script>
+
+
+<style>
+
+.team-section {
+  background: url("{{ url_for('static', filename='img/team_bg.png') }}") center / cover no-repeat fixed;
+  min-height: 100vh;
+  padding: 80px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.team-heading {
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 50px;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+
+.team-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+
+.team-card {
+  background: rgba(10, 20, 40, 0.5);
+  backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+  padding: 30px;
+  text-align: left;
+  color: #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+}
+
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 20px auto;
+}
+
+
+.team-card h3,
+.team-card p,
+.team-card li,
+.team-card strong,
+.team-card a,
+.team-card .intro,
+.team-card .quote,
+.contact-info li,
+.contact-info strong,
+.contact-info a {
+  color: #ffffff !important;
+}
+
+
+.team-card .quote {
+  font-style: italic;
+  border-left: 3px solid rgba(255,255,255,0.8);
+  padding-left: 10px;
+  margin-bottom: 12px;
+}
+
+.team-card .intro {
+  color: #f0f0f0 !important;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+
+.contact-info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-info li {
+  margin-bottom: 6px;
+}
+
+.contact-info a {
+  color: #ffffff !important;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-info a:hover {
+  color: #e0e0e0 !important;
+  text-decoration: underline;
+}
+</style>
+
+{% endblock %}

@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ 'LiveHealthy' }}{% if page %} · {{ page|capitalize }}{% endif %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+
+  <style>
+    html { scroll-behavior: smooth; }
+
+    .topbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 80px;
+      background: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(8px);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 40px;
+      z-index: 1000;
+      transition: background 0.3s ease;
+    }
+    .topbar.scrolled {
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(10px);
+    }
+
+    .logo-group { display: flex; align-items: center; gap: 25px; }
+    .logo-group a img { height: 60px; transition: transform 0.2s ease; }
+    .logo-group a img:hover { transform: scale(1.05); cursor: pointer; }
+
+    .topbar-links { display: flex; gap: 30px; }
+    .topbar a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      transition: all 0.2s ease;
+      position: relative;
+    }
+    .topbar a::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: #f8f9fa;
+      transition: width 0.3s ease;
+    }
+    .topbar a.active {
+      color: #f4f5f6;
+      font-weight: bold;
+      text-shadow: 0 0 8px rgba(79, 163, 255, 0.5);
+    }
+    .topbar a.active::after { width: 100%; }
+    .topbar a:hover { color: #f4f7fb; transform: scale(1.05); }
+    .topbar a:hover::after { width: 100%; }
+
+    .content { margin-top: 0; padding: 0; }
+
+    .bg1, .bg2, .bg3, .bg4 {
+      height: 100vh;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .bg1 { background-image: url("{{ url_for('static', filename='background.png') }}"); }
+    .bg2 { background-image: url("{{ url_for('static', filename='background2.png') }}"); }
+    .bg3 { background-image: url("{{ url_for('static', filename='background3.png') }}"); }
+    .bg4 { background-image: url("{{ url_for('static', filename='background4.png') }}"); }
+
+    .title-box {
+      background: rgba(0, 0, 0, 0.85);
+      color: white;
+      padding: 20px 40px;
+      text-align: center;
+      font-family: 'Times New Roman', serif;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    }
+    .title-box h1 {
+      font-size: 2em;
+      margin: 0;
+      font-weight: bold;
+    }
+    .title-box p {
+      margin-top: 6px;
+      font-size: 0.9em;
+      opacity: 0.85;
+      text-transform: none;
+      font-family: 'Georgia', serif;
+    }
+
+    .subtext {
+      color: white;
+      font-family: 'Georgia', serif;
+      font-size: 1.3em;
+      opacity: 0.85;
+      margin-top: 10px;
+      margin-left: -250px; 
+      text-align: left;
+    }
+
+    .white-section {
+      background: white;
+      color: black;
+      padding: 30px 60px;
+      margin-top: -60px;
+      min-height: 20vh;
+      text-align: center;
+      width: 100vw;
+      margin-left: calc(-1 * (100vw - 100%) / 2);
+    }
+    .white-section h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+    .white-section h1::after {
+      content: "";
+      position: absolute;
+      bottom: -8px;
+      width: 400px;
+      height: 2px;
+      background-color: #000;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .white-section p {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #444;
+    }
+  </style>
+</head>
+
+<body class="{{ page or 'light' }}">
+
+  <header class="topbar" id="navbar">
+    <div class="logo-group">
+      <a href="{{ url_for('home') }}">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Live Healthy logo" />
+      </a>
+      <a href="https://www.myadcs.com/" class="adcs-logo" target="_blank">
+        <img src="{{ url_for('static', filename='logo1.png') }}" alt="ADCS logo" />
+      </a>
+    </div>
+
+    <nav class="topbar-links">
+      <a href="{{ url_for('home')}}">🏛️Home</a>
+      <a href="{{ url_for('ask') }}">❔ Ask Me</a>
+      <a href="{{ url_for('answer') }}">📃 Answer</a>
+      <a href="{{ url_for('map') }}">🗺️ Map</a>
+      <a href="{{ url_for('about') }}">🔗About Me</a>
+    </nav>
+  </header>
+
+  <main class="content">
+    {% block content %}
+
+    <section class="bg1">
+      <div class="title-box">
+        <h1>GLOBAL HEALTH PROGRAM</h1>
+        <p>Understanding barriers to medical access</p>
+      </div>
+
+      <p class="subtext">A Congressional App Challenge 2025</p>
+    </section>
+
+    <section class="white-section">
+      <h1>Problem</h1>
+      <p>Around the world, many people who develop diseases face another major problem: they cannot reach proper medical care. Hospitals and clinics are often too far from rural communities, and traveling there costs more than many families can afford. Even when they arrive, long waiting times, lack of doctors, and expensive treatments make access difficult. According to the World Health Organization (WHO), more than 50% of the global population — over 4.5 billion people — were not fully covered by essential health services in 2021.</p> 
+      <p>Because of this access gap, many patients turn to the internet or informal advice for help. They spend long hours searching for what food to eat for their disease or how to manage symptoms without a doctor. However, most online information is confusing or unreliable, and poor families may not even have stable internet access. This wastes valuable time and can lead to dangerous mistakes, such as following the wrong diet or using unproven remedies.</p> 
+      <p>For poor families, both medical care and accurate information become hard to reach. Without insurance, they must pay for every test, checkup, and medicine with their own limited income. Many choose not to go to the hospital at all because the cost of one visit equals several days of food or work wages. As a result, treatable diseases worsen, and the time lost searching for solutions only deepens the cycle of illness and poverty.</p> 
+      <p>In short, the world faces a dual health-and-social crisis: treatment of disease requires both access to the right food. Without that, even the best prescriptions are incomplete.</p>
+    </section>
+
+    <section class="bg2">
+      <div class="title-box">
+        <h1>INNOVATIVE SOLUTIONS</h1>
+        <p>Bringing reliable nutrition knowledge to everyone</p>
+      </div>
+    </section>
+
+    <section class="white-section">
+      <h1>Solution</h1>
+      <p>To help people find the right food for their health without spending money, the best approach is to make reliable nutrition knowledge free and easy to reach. Governments and health organizations can create public databases that list foods suitable for different diseases and explain how they support recovery. These databases should include both local and global foods so that people from different regions can find affordable options. Information must be presented clearly, without medical jargon, and translated into local languages to ensure everyone can understand it.</p>
+      <p>Such systems should be accessible through multiple ways — websites, mobile apps, and printed guides available in hospitals, schools, and community centers. For people without internet access, radio programs or text message services can deliver daily nutrition tips. Health workers in rural areas can also use these resources to teach families how to prepare healthy meals using ingredients that are cheap and easy to find nearby. </p> 
+      <p>When accurate, understandable nutrition knowledge is freely shared, it helps people manage diseases better and reduces their dependence on expensive treatments. This open access to information builds long-term awareness and allows every individual, rich or poor, to take control of their health through smart food choices.</p>
+    </section>
+
+    <section class="bg3">
+      <div class="title-box">
+        <h1>OUR GOAL</h1>
+        <p>Empowering equal access to health information</p>
+      </div>
+    </section>
+
+    <section class="white-section">
+      <h1>Goal</h1>
+      <p>My app was created to solve this both problem . It helps users find clear and summarized health information so they can understand what is right for their condition without wasting time or money.</p> 
+      <p>The app collects trusted medical and nutrition data, then summarizes it in simple language. Users can enter their disease name, and the app will instantly show food suggestions, daily tips, and explanations. It removes the need to visit many websites or pay for expert advice. Not only,everyone can access it freely—students, workers, or families in poor areas. But aslo,my app turns complex health information into something simple, fast, and free—because everyone deserves to understand how to take care of their health.</p> 
+      <p>What makes my app special is its goal of equality. Many people cannot afford expensive medical consultations, but knowledge should not belong only to the rich. By making accurate health guidance free and easy to understand, my app gives everyone a fair chance to care for their body and live healthier.</p>
+    </section>
+
+    <section class="bg4"></section>
+
+    {% endblock %}
+  </main>
+
+  <script>
+    window.addEventListener('scroll', function() {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 80) navbar.classList.add('scrolled');
+      else navbar.classList.remove('scrolled');
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,228 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<section class="hero-section">
+  <div class="title-box">
+    <h1>PERSONAL HEALTH INSIGHT</h1>
+    <p>Discover your next step toward wellness</p>
+  </div>
+  <p class="subtext">A Congressional App Challenge 2025</p>
+
+  <div class="small-boxes-overlay">
+    <div class="small-box" data-category="food">
+      <img src="{{ url_for('static', filename='img/food_exercise.png') }}" class="box-icon">
+      <div class="overlay-text">Food & Exercise</div>
+    </div>
+
+    <div class="small-box" data-category="routine">
+      <img src="{{ url_for('static', filename='img/routine.png') }}" class="box-icon">
+      <div class="overlay-text">Daily Routine</div>
+    </div>
+
+    <div class="small-box" data-category="important">
+      <img src="{{ url_for('static', filename='img/important.jpg') }}" class="box-icon">
+      <div class="overlay-text">Important Thing</div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section" id="answerSection">
+  <div class="container">
+    <form id="userForm" style="display:none;">
+      <input type="text" name="name" value="{{ request.form.get('name', '') }}">
+      <input type="number" name="age" value="{{ request.form.get('age', '') }}">
+      <input type="number" step="0.1" name="weight" value="{{ request.form.get('weight', '') }}">
+      <input type="number" step="0.1" name="height" value="{{ request.form.get('height', '') }}">
+      <input type="text" name="sex" value="{{ request.form.get('sex', '') }}">
+      <input type="text" name="race" value="{{ request.form.get('race', '') }}">
+      {% for disease in request.form.getlist('disease') %}
+      <input type="hidden" name="disease" value="{{ disease }}">
+      {% endfor %}
+    </form>
+
+    <div id="displayArea" class="display-area">
+      <img src="{{ url_for('static', filename='img/tap_to_explore.png') }}" id="displayImage" class="main-image">
+      <p class="image-caption">Click one of the boxes above to begin.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+.hero-section {
+  position: relative;
+  height: 100vh;
+  background: url("{{ url_for('static', filename='img/answer_bg.png') }}") center / cover no-repeat fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.title-box {
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  padding: 20px 40px;
+  text-align: center;
+  font-family: 'Times New Roman', serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.subtext {
+  color: white;
+  font-family: 'Georgia', serif;
+  font-size: 1.2em;
+  opacity: 0.9;
+  margin-top: 15px;
+  margin-left: -290px;
+}
+.small-boxes-overlay {
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 40px;
+}
+.small-box {
+  position: relative;
+  width: 360px;
+  height: 200px;
+  border: 3px solid #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+.small-box:hover {
+  transform: translateY(-6px) scale(1.05);
+}
+.box-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(90%);
+}
+.overlay-text {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-weight: bold;
+  font-size: 22px;
+  text-align: center;
+  padding: 10px 0;
+}
+.content-section {
+  background: white;
+  padding: 140px 0 100px;
+  min-height: 100vh;
+}
+.container {
+  width: 1000px;
+  margin: 0 auto;
+}
+.display-area {
+  text-align: center;
+  animation: fadeIn 0.6s ease;
+}
+.main-image {
+  width: 350px;
+  max-width: 80%;
+  margin-bottom: 20px;
+  transition: transform 0.4s ease;
+}
+.main-image:hover {
+  transform: scale(1.05);
+}
+.image-caption {
+  color: #475569;
+  font-size: 1.1rem;
+  font-family: 'Georgia', serif;
+  opacity: 0.85;
+}
+.fancy-result {
+  text-align: center;
+  color: #111827;
+  margin-top: 60px;
+  font-family: 'Inter', sans-serif;
+}
+.answer-heading {
+  color: #000;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #000;
+  display: inline-block;
+  padding-bottom: 8px;
+}
+.result-text {
+  text-align: left;
+  color: #0f172a;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-top: 30px;
+}
+@keyframes fadeIn {
+  from {opacity:0;transform:translateY(15px);}
+  to {opacity:1;transform:translateY(0);}
+}
+html {
+  scroll-behavior: smooth;
+}
+</style>
+
+<script>
+const displayImage = document.getElementById('displayImage');
+const caption = document.querySelector('.image-caption');
+const smallBoxes = document.querySelectorAll('.small-box');
+const displayArea = document.getElementById('displayArea');
+const form = document.querySelector('#userForm');
+const answerSection = document.getElementById('answerSection');
+
+smallBoxes.forEach(box => {
+  box.addEventListener('click', () => {
+    const category = box.getAttribute('data-category');
+    const formData = new FormData(form);
+    answerSection.scrollIntoView({ behavior: 'smooth' });
+
+    if (category === 'food') {
+      displayImage.src = "{{ url_for('static', filename='img/loading_food.jpg') }}";
+      caption.textContent = "Analyzing your nutrition pattern...";
+    } else if (category === 'routine') {
+      displayImage.src = "{{ url_for('static', filename='img/loading_food.jpg') }}";
+      caption.textContent = "Checking your daily habits...";
+    } else {
+      displayImage.src = "{{ url_for('static', filename='img/loading_foof.jpg') }}";
+      caption.textContent = "Processing your wellness info...";
+    }
+
+    fetch(`/get_content/${category}`, { method: 'POST', body: formData })
+      .then(res => res.json())
+      .then(data => {
+        if (!data || !data.content) {
+          displayImage.src = "{{ url_for('static', filename='img/no_answer.png') }}";
+          caption.textContent = "No insights available yet — please fill out the form first.";
+        } else {
+          let cleanContent = data.content
+            .replace(/```html/g, "")
+            .replace(/```/g, "")
+            .trim();
+
+          displayArea.innerHTML = `
+            <div class="fancy-result">
+              <h1 class="answer-heading">${category.toUpperCase()} RESULT</h1>
+              <div class="result-text">${cleanContent}</div>
+            </div>`;
+        }
+      })
+      .catch(() => {
+        displayImage.src = "{{ url_for('static', filename='img/no_answer.png') }}";
+        caption.textContent = "Unable to load results. Do not forget to fill the form.";
+      });
+  });
+});
+</script>
+
+{% endblock %}

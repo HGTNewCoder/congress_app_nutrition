@@ -1,0 +1,2647 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff = L.map(
+                "map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff",
+                {
+                    center: [21.0364864, 105.8466232],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_0ba805b70ca41b6a6a37ea0e7f454a8b = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_0ba805b70ca41b6a6a37ea0e7f454a8b.addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var marker_f52b123ce839f1147c2f043e20fcd569 = L.marker(
+                [21.0364864, 105.8466232],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_9400394a8d600300245a603b342e0aa6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0f4b883d64d62e7f1d5996d44fa4057a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cf7660b9d8de9f2edac5dbeefebf8a71 = $(`<div id="html_cf7660b9d8de9f2edac5dbeefebf8a71" style="width: 100.0%; height: 100.0%;">11000, Vietnam (You are here)</div>`)[0];
+                popup_0f4b883d64d62e7f1d5996d44fa4057a.setContent(html_cf7660b9d8de9f2edac5dbeefebf8a71);
+            
+        
+
+        marker_f52b123ce839f1147c2f043e20fcd569.bindPopup(popup_0f4b883d64d62e7f1d5996d44fa4057a)
+        ;
+
+        
+    
+    
+                marker_f52b123ce839f1147c2f043e20fcd569.setIcon(icon_9400394a8d600300245a603b342e0aa6);
+            
+    
+            var marker_b16e6fe8576cdfe0228cc0b5c36d41a6 = L.marker(
+                [21.0492003, 105.8400348],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_9518e6048e5c0f58db041cc12cb71fe6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_82928916df9e72f6154056911c01a6de = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_feddb9f3f0ce4b52ac4dec96d2acecfb = $(`<div id="html_feddb9f3f0ce4b52ac4dec96d2acecfb" style="width: 100.0%; height: 100.0%;">Paris Miki Vietnam</div>`)[0];
+                popup_82928916df9e72f6154056911c01a6de.setContent(html_feddb9f3f0ce4b52ac4dec96d2acecfb);
+            
+        
+
+        marker_b16e6fe8576cdfe0228cc0b5c36d41a6.bindPopup(popup_82928916df9e72f6154056911c01a6de)
+        ;
+
+        
+    
+    
+                marker_b16e6fe8576cdfe0228cc0b5c36d41a6.setIcon(icon_9518e6048e5c0f58db041cc12cb71fe6);
+            
+    
+            var marker_ee52fbd7104c01fba569b0b5f366cbb4 = L.marker(
+                [21.0101268, 105.8382699],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_2baf6b4dd27db467079879394f1c37e2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2bceb44fff24b580de1037a402d3d29b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2d77d2ed5c73572f5ac7c58ba8a82f9b = $(`<div id="html_2d77d2ed5c73572f5ac7c58ba8a82f9b" style="width: 100.0%; height: 100.0%;">Phòng khám Đa khoa Quốc tế Hà Nội</div>`)[0];
+                popup_2bceb44fff24b580de1037a402d3d29b.setContent(html_2d77d2ed5c73572f5ac7c58ba8a82f9b);
+            
+        
+
+        marker_ee52fbd7104c01fba569b0b5f366cbb4.bindPopup(popup_2bceb44fff24b580de1037a402d3d29b)
+        ;
+
+        
+    
+    
+                marker_ee52fbd7104c01fba569b0b5f366cbb4.setIcon(icon_2baf6b4dd27db467079879394f1c37e2);
+            
+    
+            var marker_317f33150bd0ccf356632ae867f57b89 = L.marker(
+                [21.024432, 105.8548261],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_d71669e6c342d4b245574378b4939050 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0b84403ee3a3f7443b16aab20b2c346f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7a2ef01c65f8ea118b9ad7f999fefbd3 = $(`<div id="html_7a2ef01c65f8ea118b9ad7f999fefbd3" style="width: 100.0%; height: 100.0%;">Nhà hộ sinh A</div>`)[0];
+                popup_0b84403ee3a3f7443b16aab20b2c346f.setContent(html_7a2ef01c65f8ea118b9ad7f999fefbd3);
+            
+        
+
+        marker_317f33150bd0ccf356632ae867f57b89.bindPopup(popup_0b84403ee3a3f7443b16aab20b2c346f)
+        ;
+
+        
+    
+    
+                marker_317f33150bd0ccf356632ae867f57b89.setIcon(icon_d71669e6c342d4b245574378b4939050);
+            
+    
+            var marker_bad92fedef26ff1cb49372243698c15f = L.marker(
+                [21.0472605, 105.8140405],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_14ead9f349b26cfadb85401927f3bd79 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6ea1a941138f1940b3f948961f788f2d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f9c65c9ebf0bc936a5948d3742ba3493 = $(`<div id="html_f9c65c9ebf0bc936a5948d3742ba3493" style="width: 100.0%; height: 100.0%;">Phòng Khám Đa Khoa Medlatec</div>`)[0];
+                popup_6ea1a941138f1940b3f948961f788f2d.setContent(html_f9c65c9ebf0bc936a5948d3742ba3493);
+            
+        
+
+        marker_bad92fedef26ff1cb49372243698c15f.bindPopup(popup_6ea1a941138f1940b3f948961f788f2d)
+        ;
+
+        
+    
+    
+                marker_bad92fedef26ff1cb49372243698c15f.setIcon(icon_14ead9f349b26cfadb85401927f3bd79);
+            
+    
+            var marker_0404884076c2d69ee1214d28788a36a7 = L.marker(
+                [21.0431119, 105.8711851],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_b2dd7c9522872ced46dc43559ed714a3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_16331c3af4b2c00f907b590340cfecdc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c07536de909f2a3ca1712ec5ebde78ea = $(`<div id="html_c07536de909f2a3ca1712ec5ebde78ea" style="width: 100.0%; height: 100.0%;">Bệnh Viện Đa Khoa Quốc Tế Bắc Hà</div>`)[0];
+                popup_16331c3af4b2c00f907b590340cfecdc.setContent(html_c07536de909f2a3ca1712ec5ebde78ea);
+            
+        
+
+        marker_0404884076c2d69ee1214d28788a36a7.bindPopup(popup_16331c3af4b2c00f907b590340cfecdc)
+        ;
+
+        
+    
+    
+                marker_0404884076c2d69ee1214d28788a36a7.setIcon(icon_b2dd7c9522872ced46dc43559ed714a3);
+            
+    
+            var marker_97c12f9c3ecb22fc2ad42ef0c25e4a0c = L.marker(
+                [21.0168006, 105.849466],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_14cfdaf55018f09f7456a4e0d73473c4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9a0f25ebaaa2e8b9a9d96bd68ef3a077 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1e981e2e5e83824a2eb67a88cc024b9d = $(`<div id="html_1e981e2e5e83824a2eb67a88cc024b9d" style="width: 100.0%; height: 100.0%;">Bệnh viện Mắt Kỹ thuật cao Hà Nội</div>`)[0];
+                popup_9a0f25ebaaa2e8b9a9d96bd68ef3a077.setContent(html_1e981e2e5e83824a2eb67a88cc024b9d);
+            
+        
+
+        marker_97c12f9c3ecb22fc2ad42ef0c25e4a0c.bindPopup(popup_9a0f25ebaaa2e8b9a9d96bd68ef3a077)
+        ;
+
+        
+    
+    
+                marker_97c12f9c3ecb22fc2ad42ef0c25e4a0c.setIcon(icon_14cfdaf55018f09f7456a4e0d73473c4);
+            
+    
+            var marker_7a8c9eb31e8e27748e325e4711fca95b = L.marker(
+                [21.0145775, 105.8502987],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_874603db7328e54cfe0ca6ce5e4993fd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fea30bf2f3459a03035f91075ef91d34 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_832b31ea91ab2ecdb34d1b0c9a3a89b8 = $(`<div id="html_832b31ea91ab2ecdb34d1b0c9a3a89b8" style="width: 100.0%; height: 100.0%;">Bệnh viện Mắt Việt Nhật</div>`)[0];
+                popup_fea30bf2f3459a03035f91075ef91d34.setContent(html_832b31ea91ab2ecdb34d1b0c9a3a89b8);
+            
+        
+
+        marker_7a8c9eb31e8e27748e325e4711fca95b.bindPopup(popup_fea30bf2f3459a03035f91075ef91d34)
+        ;
+
+        
+    
+    
+                marker_7a8c9eb31e8e27748e325e4711fca95b.setIcon(icon_874603db7328e54cfe0ca6ce5e4993fd);
+            
+    
+            var marker_717e6faee7d9d66a1d3ddadb4ecc2b60 = L.marker(
+                [21.039512, 105.8472708],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_1a8d417f86b082b740795d7e59058d90 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f28650e136b6998a085b7d267f52cb56 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_23c140e37c80f52e7a0bdd1298acd7f1 = $(`<div id="html_23c140e37c80f52e7a0bdd1298acd7f1" style="width: 100.0%; height: 100.0%;">Trạm Y tế phường Hàng Mã</div>`)[0];
+                popup_f28650e136b6998a085b7d267f52cb56.setContent(html_23c140e37c80f52e7a0bdd1298acd7f1);
+            
+        
+
+        marker_717e6faee7d9d66a1d3ddadb4ecc2b60.bindPopup(popup_f28650e136b6998a085b7d267f52cb56)
+        ;
+
+        
+    
+    
+                marker_717e6faee7d9d66a1d3ddadb4ecc2b60.setIcon(icon_1a8d417f86b082b740795d7e59058d90);
+            
+    
+            var marker_56acd030b6a591ef42641375da5c8fae = L.marker(
+                [21.0135889, 105.8209988],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_8bb577f957677b3add6993eec138fd17 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d00abad1dfef9fb756388f5853978f88 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2a998e64f3c8ea0b82aeb6eccd0bd407 = $(`<div id="html_2a998e64f3c8ea0b82aeb6eccd0bd407" style="width: 100.0%; height: 100.0%;">Bệnh viện đa khoa Nông nghiệp 2</div>`)[0];
+                popup_d00abad1dfef9fb756388f5853978f88.setContent(html_2a998e64f3c8ea0b82aeb6eccd0bd407);
+            
+        
+
+        marker_56acd030b6a591ef42641375da5c8fae.bindPopup(popup_d00abad1dfef9fb756388f5853978f88)
+        ;
+
+        
+    
+    
+                marker_56acd030b6a591ef42641375da5c8fae.setIcon(icon_8bb577f957677b3add6993eec138fd17);
+            
+    
+            var marker_35c55aa025aff33f8dbb0b6a83dade4b = L.marker(
+                [21.0471714, 105.8458691],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_7ed4e8553473b0438ffc40bbab98fda7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0881931c0722c7faeb043819d32b9d30 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b55117007f5cd150c60f24fddb14ec0e = $(`<div id="html_b55117007f5cd150c60f24fddb14ec0e" style="width: 100.0%; height: 100.0%;">Bệnh viện Đa khoa Hoè Nhai - Cơ sở 2</div>`)[0];
+                popup_0881931c0722c7faeb043819d32b9d30.setContent(html_b55117007f5cd150c60f24fddb14ec0e);
+            
+        
+
+        marker_35c55aa025aff33f8dbb0b6a83dade4b.bindPopup(popup_0881931c0722c7faeb043819d32b9d30)
+        ;
+
+        
+    
+    
+                marker_35c55aa025aff33f8dbb0b6a83dade4b.setIcon(icon_7ed4e8553473b0438ffc40bbab98fda7);
+            
+    
+            var marker_1636683c45558e1b695fb174530f851f = L.marker(
+                [21.0115478, 105.8104566],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_656d6854c6e51d8486c21abf6d451490 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_938773b6761ae734ff9409608776a58c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8f9fca7298d76e7794a6e9938de8875a = $(`<div id="html_8f9fca7298d76e7794a6e9938de8875a" style="width: 100.0%; height: 100.0%;">Bệnh viện mắt Sài Gòn Hà Nội 1</div>`)[0];
+                popup_938773b6761ae734ff9409608776a58c.setContent(html_8f9fca7298d76e7794a6e9938de8875a);
+            
+        
+
+        marker_1636683c45558e1b695fb174530f851f.bindPopup(popup_938773b6761ae734ff9409608776a58c)
+        ;
+
+        
+    
+    
+                marker_1636683c45558e1b695fb174530f851f.setIcon(icon_656d6854c6e51d8486c21abf6d451490);
+            
+    
+            var marker_793e18a48141bf488da4d52c98d4aabb = L.marker(
+                [20.9965075, 105.8651351],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_2223278204df59f4a455018f6ac1f6c8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_10d96727465bf42f882d8d11b1b602f1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e115133895124cba4383443dc4579f16 = $(`<div id="html_e115133895124cba4383443dc4579f16" style="width: 100.0%; height: 100.0%;">Bệnh viện Dệt May</div>`)[0];
+                popup_10d96727465bf42f882d8d11b1b602f1.setContent(html_e115133895124cba4383443dc4579f16);
+            
+        
+
+        marker_793e18a48141bf488da4d52c98d4aabb.bindPopup(popup_10d96727465bf42f882d8d11b1b602f1)
+        ;
+
+        
+    
+    
+                marker_793e18a48141bf488da4d52c98d4aabb.setIcon(icon_2223278204df59f4a455018f6ac1f6c8);
+            
+    
+            var marker_5e2c3222ed7706a68abb1606e28ec16a = L.marker(
+                [21.026761, 105.8265759],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_38960dfb550b7c08111b73b763251fab = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bda63a9c8eab73008f6c9dccebfe8b06 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2ce81e5696dd115fab89c4cae094dc38 = $(`<div id="html_2ce81e5696dd115fab89c4cae094dc38" style="width: 100.0%; height: 100.0%;">Bệnh viện Đa khoa Hà Thành</div>`)[0];
+                popup_bda63a9c8eab73008f6c9dccebfe8b06.setContent(html_2ce81e5696dd115fab89c4cae094dc38);
+            
+        
+
+        marker_5e2c3222ed7706a68abb1606e28ec16a.bindPopup(popup_bda63a9c8eab73008f6c9dccebfe8b06)
+        ;
+
+        
+    
+    
+                marker_5e2c3222ed7706a68abb1606e28ec16a.setIcon(icon_38960dfb550b7c08111b73b763251fab);
+            
+    
+            var marker_0c529d51d576471cf36b3811cca2db02 = L.marker(
+                [21.0021332, 105.8388831],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_af8f567a5a03cf89d9cb61cbc4136b59 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fd88acac4eb34c2f30248bcb9623a5b0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f5574f1fad0193d1e50c9a23c2417e16 = $(`<div id="html_f5574f1fad0193d1e50c9a23c2417e16" style="width: 100.0%; height: 100.0%;">Bệnh viện Bệnh Nhiệt đới Trung ương</div>`)[0];
+                popup_fd88acac4eb34c2f30248bcb9623a5b0.setContent(html_f5574f1fad0193d1e50c9a23c2417e16);
+            
+        
+
+        marker_0c529d51d576471cf36b3811cca2db02.bindPopup(popup_fd88acac4eb34c2f30248bcb9623a5b0)
+        ;
+
+        
+    
+    
+                marker_0c529d51d576471cf36b3811cca2db02.setIcon(icon_af8f567a5a03cf89d9cb61cbc4136b59);
+            
+    
+            var marker_c868dd3b257584266204010ad3410c51 = L.marker(
+                [21.0123966, 105.8150138],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_ad134031c8efb1cd0502383fdddde6f4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_44b38ddbd470ff83bcb877283b1dfb06 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c0fe8ec333da80cc7a2f1ecb03f05a20 = $(`<div id="html_c0fe8ec333da80cc7a2f1ecb03f05a20" style="width: 100.0%; height: 100.0%;">Bệnh viện Nội tiết Trung ương</div>`)[0];
+                popup_44b38ddbd470ff83bcb877283b1dfb06.setContent(html_c0fe8ec333da80cc7a2f1ecb03f05a20);
+            
+        
+
+        marker_c868dd3b257584266204010ad3410c51.bindPopup(popup_44b38ddbd470ff83bcb877283b1dfb06)
+        ;
+
+        
+    
+    
+                marker_c868dd3b257584266204010ad3410c51.setIcon(icon_ad134031c8efb1cd0502383fdddde6f4);
+            
+    
+            var marker_79e60e64211b582ce3d42241b0a50818 = L.marker(
+                [21.0400936, 105.8120457],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_fed1c6781dccce84f12fc68ccc390eb3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1cc922e2db5241d927b86446f23b47a3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_989773e266994c5523b4d19a1c0e8b51 = $(`<div id="html_989773e266994c5523b4d19a1c0e8b51" style="width: 100.0%; height: 100.0%;">Bệnh viện Quân y 354</div>`)[0];
+                popup_1cc922e2db5241d927b86446f23b47a3.setContent(html_989773e266994c5523b4d19a1c0e8b51);
+            
+        
+
+        marker_79e60e64211b582ce3d42241b0a50818.bindPopup(popup_1cc922e2db5241d927b86446f23b47a3)
+        ;
+
+        
+    
+    
+                marker_79e60e64211b582ce3d42241b0a50818.setIcon(icon_fed1c6781dccce84f12fc68ccc390eb3);
+            
+    
+            var marker_f10483f6f2af70d32fbf80e6a1a962a7 = L.marker(
+                [21.0155559, 105.8267948],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_179ee2434f6111f86eed8f65b4c25393 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c05355bbe5562bd1fbd38aa64a2b964f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_85101b8d4676e20ea0aa89c364e23a93 = $(`<div id="html_85101b8d4676e20ea0aa89c364e23a93" style="width: 100.0%; height: 100.0%;">Bệnh viện Đa khoa Đống Đa</div>`)[0];
+                popup_c05355bbe5562bd1fbd38aa64a2b964f.setContent(html_85101b8d4676e20ea0aa89c364e23a93);
+            
+        
+
+        marker_f10483f6f2af70d32fbf80e6a1a962a7.bindPopup(popup_c05355bbe5562bd1fbd38aa64a2b964f)
+        ;
+
+        
+    
+    
+                marker_f10483f6f2af70d32fbf80e6a1a962a7.setIcon(icon_179ee2434f6111f86eed8f65b4c25393);
+            
+    
+            var marker_efe83f520d603fed39c6e3101eac273e = L.marker(
+                [21.0423434, 105.8134109],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_6f8f79ce212bf2a18487810195b2c861 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6d7aa8a725b8c2d07b2583b87b37bbf6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e67cfd327648e52471254d53c9a657e8 = $(`<div id="html_e67cfd327648e52471254d53c9a657e8" style="width: 100.0%; height: 100.0%;">Bệnh viện Phổi Trung ương</div>`)[0];
+                popup_6d7aa8a725b8c2d07b2583b87b37bbf6.setContent(html_e67cfd327648e52471254d53c9a657e8);
+            
+        
+
+        marker_efe83f520d603fed39c6e3101eac273e.bindPopup(popup_6d7aa8a725b8c2d07b2583b87b37bbf6)
+        ;
+
+        
+    
+    
+                marker_efe83f520d603fed39c6e3101eac273e.setIcon(icon_6f8f79ce212bf2a18487810195b2c861);
+            
+    
+            var marker_79fc6ee0932d73351e48c9e2adcbe511 = L.marker(
+                [21.0637284, 105.8274354],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_aa2e973c4af859c0604479e32490a8f1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f8bc3ef4f63f1eed7f28d75c0f78d087 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bfb683035a2d96e075554d5de5bc1a8c = $(`<div id="html_bfb683035a2d96e075554d5de5bc1a8c" style="width: 100.0%; height: 100.0%;">Phòng Khám Y Tế Nha Khoa Quốc Tế SOS</div>`)[0];
+                popup_f8bc3ef4f63f1eed7f28d75c0f78d087.setContent(html_bfb683035a2d96e075554d5de5bc1a8c);
+            
+        
+
+        marker_79fc6ee0932d73351e48c9e2adcbe511.bindPopup(popup_f8bc3ef4f63f1eed7f28d75c0f78d087)
+        ;
+
+        
+    
+    
+                marker_79fc6ee0932d73351e48c9e2adcbe511.setIcon(icon_aa2e973c4af859c0604479e32490a8f1);
+            
+    
+            var marker_74ebf1239943a75b234c2288661563dc = L.marker(
+                [21.0268213, 105.8074644],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_ecb19d460b27be338982c723f6291547 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_17d0c0b8b8537370f9951f0f203429da = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0a92e5f19d496612bdd8dc6129f1c0d6 = $(`<div id="html_0a92e5f19d496612bdd8dc6129f1c0d6" style="width: 100.0%; height: 100.0%;">Bệnh viện Phụ sản Hà Nội</div>`)[0];
+                popup_17d0c0b8b8537370f9951f0f203429da.setContent(html_0a92e5f19d496612bdd8dc6129f1c0d6);
+            
+        
+
+        marker_74ebf1239943a75b234c2288661563dc.bindPopup(popup_17d0c0b8b8537370f9951f0f203429da)
+        ;
+
+        
+    
+    
+                marker_74ebf1239943a75b234c2288661563dc.setIcon(icon_ecb19d460b27be338982c723f6291547);
+            
+    
+            var marker_9a1acb4ed2eb4eb2b4d60fd3e5316998 = L.marker(
+                [21.0249118, 105.8083673],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_28ea13d2f475b585a5f52864801c884f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_53d65ba114583ada12eb66f32b405f68 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_17a4889f9043fa6d5a7aebe98f57eb21 = $(`<div id="html_17a4889f9043fa6d5a7aebe98f57eb21" style="width: 100.0%; height: 100.0%;">Bệnh viện Nhi Trung ương</div>`)[0];
+                popup_53d65ba114583ada12eb66f32b405f68.setContent(html_17a4889f9043fa6d5a7aebe98f57eb21);
+            
+        
+
+        marker_9a1acb4ed2eb4eb2b4d60fd3e5316998.bindPopup(popup_53d65ba114583ada12eb66f32b405f68)
+        ;
+
+        
+    
+    
+                marker_9a1acb4ed2eb4eb2b4d60fd3e5316998.setIcon(icon_28ea13d2f475b585a5f52864801c884f);
+            
+    
+            var marker_c6917e366012b8985a7dcaa882794579 = L.marker(
+                [21.0312292, 105.8351549],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_43a618c35c82627d0f879e5351ecf368 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1b3eaa8aa7dd5a20ce5c7fa2a406ed88 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bd6c81eb8fc09995cf890741b8965a05 = $(`<div id="html_bd6c81eb8fc09995cf890741b8965a05" style="width: 100.0%; height: 100.0%;">Bệnh viện Đa khoa Xanh Pôn</div>`)[0];
+                popup_1b3eaa8aa7dd5a20ce5c7fa2a406ed88.setContent(html_bd6c81eb8fc09995cf890741b8965a05);
+            
+        
+
+        marker_c6917e366012b8985a7dcaa882794579.bindPopup(popup_1b3eaa8aa7dd5a20ce5c7fa2a406ed88)
+        ;
+
+        
+    
+    
+                marker_c6917e366012b8985a7dcaa882794579.setIcon(icon_43a618c35c82627d0f879e5351ecf368);
+            
+    
+            var marker_cafefb91b4ce9cdd00d8f7887d97d1c6 = L.marker(
+                [21.0018102, 105.8394004],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_0862b7a201fe60b970ec1aa22c7d7c48 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_39d13243d0da4c2d93d5cf3ff5033b08 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_98f92fe17661cd761b572eb55f427663 = $(`<div id="html_98f92fe17661cd761b572eb55f427663" style="width: 100.0%; height: 100.0%;">Bệnh viện Bạch Mai</div>`)[0];
+                popup_39d13243d0da4c2d93d5cf3ff5033b08.setContent(html_98f92fe17661cd761b572eb55f427663);
+            
+        
+
+        marker_cafefb91b4ce9cdd00d8f7887d97d1c6.bindPopup(popup_39d13243d0da4c2d93d5cf3ff5033b08)
+        ;
+
+        
+    
+    
+                marker_cafefb91b4ce9cdd00d8f7887d97d1c6.setIcon(icon_0862b7a201fe60b970ec1aa22c7d7c48);
+            
+    
+            var marker_b4fa4fff4dc37ca9f64379b6a0000e79 = L.marker(
+                [21.0163854, 105.8606157],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_d314bf2c62c19edee4e9722a90114974 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4820613df63d6781dec7820f01244dbb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e7c6bcd5b9c4dd3f8336fa982f4f7054 = $(`<div id="html_e7c6bcd5b9c4dd3f8336fa982f4f7054" style="width: 100.0%; height: 100.0%;">Bệnh viện Trung ương Quân đội 108</div>`)[0];
+                popup_4820613df63d6781dec7820f01244dbb.setContent(html_e7c6bcd5b9c4dd3f8336fa982f4f7054);
+            
+        
+
+        marker_b4fa4fff4dc37ca9f64379b6a0000e79.bindPopup(popup_4820613df63d6781dec7820f01244dbb)
+        ;
+
+        
+    
+    
+                marker_b4fa4fff4dc37ca9f64379b6a0000e79.setIcon(icon_d314bf2c62c19edee4e9722a90114974);
+            
+    
+            var marker_b267c3485908ec9ad3e2d91b3a845d2c = L.marker(
+                [21.0021905, 105.8301557],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_7d54d2535af5db1725b0a21301232353 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c0f99a6621db5e588f676f5916a5406d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c217599a7a9cf8e12800d5cfae628378 = $(`<div id="html_c217599a7a9cf8e12800d5cfae628378" style="width: 100.0%; height: 100.0%;">Bệnh viện Đại học Y Hà Nội</div>`)[0];
+                popup_c0f99a6621db5e588f676f5916a5406d.setContent(html_c217599a7a9cf8e12800d5cfae628378);
+            
+        
+
+        marker_b267c3485908ec9ad3e2d91b3a845d2c.bindPopup(popup_c0f99a6621db5e588f676f5916a5406d)
+        ;
+
+        
+    
+    
+                marker_b267c3485908ec9ad3e2d91b3a845d2c.setIcon(icon_7d54d2535af5db1725b0a21301232353);
+            
+    
+            var marker_4823f2519c4e09a4683373047e2dea12 = L.marker(
+                [21.0261377, 105.8025875],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_c1838c99dffcea9e7f47b2533d217305 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_86ec1e9ab90d2e45e702de0b3199bfe8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a3c5fda90455789d45f16707cc9435fe = $(`<div id="html_a3c5fda90455789d45f16707cc9435fe" style="width: 100.0%; height: 100.0%;">Bệnh viện Giao thông Vận tải</div>`)[0];
+                popup_86ec1e9ab90d2e45e702de0b3199bfe8.setContent(html_a3c5fda90455789d45f16707cc9435fe);
+            
+        
+
+        marker_4823f2519c4e09a4683373047e2dea12.bindPopup(popup_86ec1e9ab90d2e45e702de0b3199bfe8)
+        ;
+
+        
+    
+    
+                marker_4823f2519c4e09a4683373047e2dea12.setIcon(icon_c1838c99dffcea9e7f47b2533d217305);
+            
+    
+            var marker_2e43cd31f04a7bbff5941362c0474d58 = L.marker(
+                [21.040591, 105.8768692],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_45b88f5b3deafed6d46aa0ebac9086b4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a1a391631488d9826b42435c1b734b68 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2f95b27d6b00b5166227de173099a84d = $(`<div id="html_2f95b27d6b00b5166227de173099a84d" style="width: 100.0%; height: 100.0%;">Bệnh viện Đa khoa Tâm Anh</div>`)[0];
+                popup_a1a391631488d9826b42435c1b734b68.setContent(html_2f95b27d6b00b5166227de173099a84d);
+            
+        
+
+        marker_2e43cd31f04a7bbff5941362c0474d58.bindPopup(popup_a1a391631488d9826b42435c1b734b68)
+        ;
+
+        
+    
+    
+                marker_2e43cd31f04a7bbff5941362c0474d58.setIcon(icon_45b88f5b3deafed6d46aa0ebac9086b4);
+            
+    
+            var marker_c4564fc6868fe3af25c495400535f9ba = L.marker(
+                [21.0451209, 105.8144621],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_c869ccbfdae87cdc204f2f3667c3bd2a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fbac9bbb9d3fed70ce45fc19ff2f7658 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_eeebb6fcca2fd3634c015441937f3ef2 = $(`<div id="html_eeebb6fcca2fd3634c015441937f3ef2" style="width: 100.0%; height: 100.0%;">Bệnh viện Đa khoa Quốc tế Thu Cúc</div>`)[0];
+                popup_fbac9bbb9d3fed70ce45fc19ff2f7658.setContent(html_eeebb6fcca2fd3634c015441937f3ef2);
+            
+        
+
+        marker_c4564fc6868fe3af25c495400535f9ba.bindPopup(popup_fbac9bbb9d3fed70ce45fc19ff2f7658)
+        ;
+
+        
+    
+    
+                marker_c4564fc6868fe3af25c495400535f9ba.setIcon(icon_c869ccbfdae87cdc204f2f3667c3bd2a);
+            
+    
+            var marker_a4cb57ef31d9b0c861ab6f4a51d8c6c6 = L.marker(
+                [21.0424358, 105.8443367],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_93d822c4ce326d858085858f4fb5cc5c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ef82acb88c54921f6bc03eef8e68306c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c6e553eb1b25b179618ca44f61b085de = $(`<div id="html_c6e553eb1b25b179618ca44f61b085de" style="width: 100.0%; height: 100.0%;">Bệnh Viện Đa Khoa Hồng Ngọc</div>`)[0];
+                popup_ef82acb88c54921f6bc03eef8e68306c.setContent(html_c6e553eb1b25b179618ca44f61b085de);
+            
+        
+
+        marker_a4cb57ef31d9b0c861ab6f4a51d8c6c6.bindPopup(popup_ef82acb88c54921f6bc03eef8e68306c)
+        ;
+
+        
+    
+    
+                marker_a4cb57ef31d9b0c861ab6f4a51d8c6c6.setIcon(icon_93d822c4ce326d858085858f4fb5cc5c);
+            
+    
+            var marker_1f8d921824cb4b4d6b6d0a61f12f6f95 = L.marker(
+                [21.0350369, 105.8523965],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_0ba8643d27584a3d189223bbbf10d338 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d15f9e3104f47b6fddf15af51df8f425 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_20025d11d757a92afb594de6996c5412 = $(`<div id="html_20025d11d757a92afb594de6996c5412" style="width: 100.0%; height: 100.0%;">Trung tâm Y tế quận Hoàn Kiếm</div>`)[0];
+                popup_d15f9e3104f47b6fddf15af51df8f425.setContent(html_20025d11d757a92afb594de6996c5412);
+            
+        
+
+        marker_1f8d921824cb4b4d6b6d0a61f12f6f95.bindPopup(popup_d15f9e3104f47b6fddf15af51df8f425)
+        ;
+
+        
+    
+    
+                marker_1f8d921824cb4b4d6b6d0a61f12f6f95.setIcon(icon_0ba8643d27584a3d189223bbbf10d338);
+            
+    
+            var marker_9d3375770344ed9d366d0eaeb1dce50f = L.marker(
+                [21.0281103, 105.8385861],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_622ceec4d03c41974a12dfd9d2f07803 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9af14485db992ad5f068b33a82ba5fc8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_67341ac842f8c43eaba770f3876fad3f = $(`<div id="html_67341ac842f8c43eaba770f3876fad3f" style="width: 100.0%; height: 100.0%;">Bệnh viện Da liễu Hà Nội</div>`)[0];
+                popup_9af14485db992ad5f068b33a82ba5fc8.setContent(html_67341ac842f8c43eaba770f3876fad3f);
+            
+        
+
+        marker_9d3375770344ed9d366d0eaeb1dce50f.bindPopup(popup_9af14485db992ad5f068b33a82ba5fc8)
+        ;
+
+        
+    
+    
+                marker_9d3375770344ed9d366d0eaeb1dce50f.setIcon(icon_622ceec4d03c41974a12dfd9d2f07803);
+            
+    
+            var marker_c799c533f76e9c6ea325686f9415add4 = L.marker(
+                [21.0268166, 105.8390572],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_a397c6870f960925ebbd6f2c619c3475 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6a7f578f856fd89665f2cc79cccb2923 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_45fcddaa88128e09dd5a46a329db50c8 = $(`<div id="html_45fcddaa88128e09dd5a46a329db50c8" style="width: 100.0%; height: 100.0%;">Bệnh viện Đa khoa Quốc tế Hồng Hà</div>`)[0];
+                popup_6a7f578f856fd89665f2cc79cccb2923.setContent(html_45fcddaa88128e09dd5a46a329db50c8);
+            
+        
+
+        marker_c799c533f76e9c6ea325686f9415add4.bindPopup(popup_6a7f578f856fd89665f2cc79cccb2923)
+        ;
+
+        
+    
+    
+                marker_c799c533f76e9c6ea325686f9415add4.setIcon(icon_a397c6870f960925ebbd6f2c619c3475);
+            
+    
+            var marker_4967cde4bd6c6358349a973e4ac6b214 = L.marker(
+                [21.0266842, 105.8469248],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_1317d598310882dee6b6e7aea85b499c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_660d7eae4fbb9122e3f627e8105bd911 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a76ac9bcaa4233f0bb79f4653e935bc4 = $(`<div id="html_a76ac9bcaa4233f0bb79f4653e935bc4" style="width: 100.0%; height: 100.0%;">Bệnh viện Phụ sản Trung ương</div>`)[0];
+                popup_660d7eae4fbb9122e3f627e8105bd911.setContent(html_a76ac9bcaa4233f0bb79f4653e935bc4);
+            
+        
+
+        marker_4967cde4bd6c6358349a973e4ac6b214.bindPopup(popup_660d7eae4fbb9122e3f627e8105bd911)
+        ;
+
+        
+    
+    
+                marker_4967cde4bd6c6358349a973e4ac6b214.setIcon(icon_1317d598310882dee6b6e7aea85b499c);
+            
+    
+            var marker_3231a08484c660dc5c86aa3b95879ffc = L.marker(
+                [21.0268963, 105.8461355],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_30018722461a3121b65460069a7bc519 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8c662d9bcab04244f74ba943bf24c4c3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_232dc5766882acbbfd27e73c163d461e = $(`<div id="html_232dc5766882acbbfd27e73c163d461e" style="width: 100.0%; height: 100.0%;">Bệnh viện K</div>`)[0];
+                popup_8c662d9bcab04244f74ba943bf24c4c3.setContent(html_232dc5766882acbbfd27e73c163d461e);
+            
+        
+
+        marker_3231a08484c660dc5c86aa3b95879ffc.bindPopup(popup_8c662d9bcab04244f74ba943bf24c4c3)
+        ;
+
+        
+    
+    
+                marker_3231a08484c660dc5c86aa3b95879ffc.setIcon(icon_30018722461a3121b65460069a7bc519);
+            
+    
+            var marker_e37547adc2602d2b3ba5224b1fe9d909 = L.marker(
+                [21.0285801, 105.8470046],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_90701e177a527d7195c8cdfac55ad678 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bede9f03eeec076dc71bd2a468e1eec6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c80ebcbf2015b25b2a97d11dc35fc159 = $(`<div id="html_c80ebcbf2015b25b2a97d11dc35fc159" style="width: 100.0%; height: 100.0%;">Bệnh viện Hữu nghị Việt Đức</div>`)[0];
+                popup_bede9f03eeec076dc71bd2a468e1eec6.setContent(html_c80ebcbf2015b25b2a97d11dc35fc159);
+            
+        
+
+        marker_e37547adc2602d2b3ba5224b1fe9d909.bindPopup(popup_bede9f03eeec076dc71bd2a468e1eec6)
+        ;
+
+        
+    
+    
+                marker_e37547adc2602d2b3ba5224b1fe9d909.setIcon(icon_90701e177a527d7195c8cdfac55ad678);
+            
+    
+            var marker_23babd1238e64ab4f6dfe7cd5b212e29 = L.marker(
+                [21.0277635, 105.8464388],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_7858a30df6e6bec9fcb7ed8b60d0931d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7bc96bba9ff8cd95af54e7381aeb663a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4ae06b7b6f33bc14066ecd0633fe8d55 = $(`<div id="html_4ae06b7b6f33bc14066ecd0633fe8d55" style="width: 100.0%; height: 100.0%;">Bệnh viện Răng Hàm Mặt Trung ương Hà Nội</div>`)[0];
+                popup_7bc96bba9ff8cd95af54e7381aeb663a.setContent(html_4ae06b7b6f33bc14066ecd0633fe8d55);
+            
+        
+
+        marker_23babd1238e64ab4f6dfe7cd5b212e29.bindPopup(popup_7bc96bba9ff8cd95af54e7381aeb663a)
+        ;
+
+        
+    
+    
+                marker_23babd1238e64ab4f6dfe7cd5b212e29.setIcon(icon_7858a30df6e6bec9fcb7ed8b60d0931d);
+            
+    
+            var marker_fe50725f7244358388105bbae72bcce4 = L.marker(
+                [21.024085, 105.8503409],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_f9070597f95e9cbf6ba8c194fb1acb58 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ad984f1c8c6f47e2fe430c788d21fe7c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f1be40e4f91b25bdcad666ca68bec52b = $(`<div id="html_f1be40e4f91b25bdcad666ca68bec52b" style="width: 100.0%; height: 100.0%;">Bệnh viện Mắt Hà Nội (Trụ sở chính)</div>`)[0];
+                popup_ad984f1c8c6f47e2fe430c788d21fe7c.setContent(html_f1be40e4f91b25bdcad666ca68bec52b);
+            
+        
+
+        marker_fe50725f7244358388105bbae72bcce4.bindPopup(popup_ad984f1c8c6f47e2fe430c788d21fe7c)
+        ;
+
+        
+    
+    
+                marker_fe50725f7244358388105bbae72bcce4.setIcon(icon_f9070597f95e9cbf6ba8c194fb1acb58);
+            
+    
+            var marker_81c3061ff56f63e30c6f1abe0333f799 = L.marker(
+                [21.0154534, 105.8617595],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_31e09af7e29fe16f676b01e26b1de692 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_aad8004b8b05912d47a4d002436576ab = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0aa783f3dc61f96b61aa75a4dc2d4428 = $(`<div id="html_0aa783f3dc61f96b61aa75a4dc2d4428" style="width: 100.0%; height: 100.0%;">Bệnh viện Hữu Nghị</div>`)[0];
+                popup_aad8004b8b05912d47a4d002436576ab.setContent(html_0aa783f3dc61f96b61aa75a4dc2d4428);
+            
+        
+
+        marker_81c3061ff56f63e30c6f1abe0333f799.bindPopup(popup_aad8004b8b05912d47a4d002436576ab)
+        ;
+
+        
+    
+    
+                marker_81c3061ff56f63e30c6f1abe0333f799.setIcon(icon_31e09af7e29fe16f676b01e26b1de692);
+            
+    
+            var marker_b2f66df1cf0e300fa91f2b62718f5c2d = L.marker(
+                [21.0176301, 105.8495995],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_184228f928471c2a1e67fab11e47b103 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b8049144404c818f2491cd556b0bba2b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_92b0ffe9ac8bb25ba64e52947e3a1d1b = $(`<div id="html_92b0ffe9ac8bb25ba64e52947e3a1d1b" style="width: 100.0%; height: 100.0%;">Bệnh viện Mắt Trung ương</div>`)[0];
+                popup_b8049144404c818f2491cd556b0bba2b.setContent(html_92b0ffe9ac8bb25ba64e52947e3a1d1b);
+            
+        
+
+        marker_b2f66df1cf0e300fa91f2b62718f5c2d.bindPopup(popup_b8049144404c818f2491cd556b0bba2b)
+        ;
+
+        
+    
+    
+                marker_b2f66df1cf0e300fa91f2b62718f5c2d.setIcon(icon_184228f928471c2a1e67fab11e47b103);
+            
+    
+            var marker_f244ace04b12e20c39566bd8025d20bf = L.marker(
+                [21.0093319, 105.8379891],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_f6fb17a614b8bb23458377a094394b70 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c862e47c8d10d23f1912429c680137fd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_546194497c857028a9d1ebff4d7c0abd = $(`<div id="html_546194497c857028a9d1ebff4d7c0abd" style="width: 100.0%; height: 100.0%;">Bệnh viện Đông Đô</div>`)[0];
+                popup_c862e47c8d10d23f1912429c680137fd.setContent(html_546194497c857028a9d1ebff4d7c0abd);
+            
+        
+
+        marker_f244ace04b12e20c39566bd8025d20bf.bindPopup(popup_c862e47c8d10d23f1912429c680137fd)
+        ;
+
+        
+    
+    
+                marker_f244ace04b12e20c39566bd8025d20bf.setIcon(icon_f6fb17a614b8bb23458377a094394b70);
+            
+    
+            var marker_813db2e0142d9b19e36fa1edf1597041 = L.marker(
+                [21.0129915, 105.8496681],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_9caf20a74abe1c35f608979c9000bb9b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0057f88e11a1c7c66b45ef9a246c90d9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e5a13873f3dbbf9a3f079325884f3691 = $(`<div id="html_e5a13873f3dbbf9a3f079325884f3691" style="width: 100.0%; height: 100.0%;">Bệnh viện Mắt Quốc tế DND</div>`)[0];
+                popup_0057f88e11a1c7c66b45ef9a246c90d9.setContent(html_e5a13873f3dbbf9a3f079325884f3691);
+            
+        
+
+        marker_813db2e0142d9b19e36fa1edf1597041.bindPopup(popup_0057f88e11a1c7c66b45ef9a246c90d9)
+        ;
+
+        
+    
+    
+                marker_813db2e0142d9b19e36fa1edf1597041.setIcon(icon_9caf20a74abe1c35f608979c9000bb9b);
+            
+    
+            var marker_4ec172a72709b8424b01e08c2b5d85ba = L.marker(
+                [21.0038701, 105.8590785],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_95dfcece3848bb76fac1e36d80b0c57d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7e1c8fd352b80583dc025fdb8a637349 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_be5f6c497ecdd511d47a99ddcbc9ef34 = $(`<div id="html_be5f6c497ecdd511d47a99ddcbc9ef34" style="width: 100.0%; height: 100.0%;">Bệnh viện Thanh Nhàn</div>`)[0];
+                popup_7e1c8fd352b80583dc025fdb8a637349.setContent(html_be5f6c497ecdd511d47a99ddcbc9ef34);
+            
+        
+
+        marker_4ec172a72709b8424b01e08c2b5d85ba.bindPopup(popup_7e1c8fd352b80583dc025fdb8a637349)
+        ;
+
+        
+    
+    
+                marker_4ec172a72709b8424b01e08c2b5d85ba.setIcon(icon_95dfcece3848bb76fac1e36d80b0c57d);
+            
+    
+            var marker_45731a00493cc93719367ce570904700 = L.marker(
+                [21.0040116, 105.8593391],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_be55fff4e1b7d6479a9f99bfc2f6dfce = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_99468704321278a9fe037ebf4cab0eeb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0a5421e78fa54008703fdc723a0afdaa = $(`<div id="html_0a5421e78fa54008703fdc723a0afdaa" style="width: 100.0%; height: 100.0%;">Bệnh viện Ung bướu Hà Nội</div>`)[0];
+                popup_99468704321278a9fe037ebf4cab0eeb.setContent(html_0a5421e78fa54008703fdc723a0afdaa);
+            
+        
+
+        marker_45731a00493cc93719367ce570904700.bindPopup(popup_99468704321278a9fe037ebf4cab0eeb)
+        ;
+
+        
+    
+    
+                marker_45731a00493cc93719367ce570904700.setIcon(icon_be55fff4e1b7d6479a9f99bfc2f6dfce);
+            
+    
+            var marker_f79e880124ba01dc961cfc69df1dcfbd = L.marker(
+                [21.0033713, 105.8583866],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_89cf1003b955f0d803f71955faa6e065 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6674f8e2a1bfe02ee3601422c2102d43 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8d3beaca7ca962d920d5d41e156b28ef = $(`<div id="html_8d3beaca7ca962d920d5d41e156b28ef" style="width: 100.0%; height: 100.0%;">Bệnh viện Phổi Hà Nội</div>`)[0];
+                popup_6674f8e2a1bfe02ee3601422c2102d43.setContent(html_8d3beaca7ca962d920d5d41e156b28ef);
+            
+        
+
+        marker_f79e880124ba01dc961cfc69df1dcfbd.bindPopup(popup_6674f8e2a1bfe02ee3601422c2102d43)
+        ;
+
+        
+    
+    
+                marker_f79e880124ba01dc961cfc69df1dcfbd.setIcon(icon_89cf1003b955f0d803f71955faa6e065);
+            
+    
+            var marker_20b688e9aed99b49af6c04dea68dfdb8 = L.marker(
+                [21.0240047, 105.8439728],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_b15b70fc2d509b1fc561a11d94aa6ab5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f80c2221855de2ea4e38266bbe7a42b7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5ba7cf38ca3f2974104e95fce8d4c5c8 = $(`<div id="html_5ba7cf38ca3f2974104e95fce8d4c5c8" style="width: 100.0%; height: 100.0%;">Bệnh viện Tim Hà Nội</div>`)[0];
+                popup_f80c2221855de2ea4e38266bbe7a42b7.setContent(html_5ba7cf38ca3f2974104e95fce8d4c5c8);
+            
+        
+
+        marker_20b688e9aed99b49af6c04dea68dfdb8.bindPopup(popup_f80c2221855de2ea4e38266bbe7a42b7)
+        ;
+
+        
+    
+    
+                marker_20b688e9aed99b49af6c04dea68dfdb8.setIcon(icon_b15b70fc2d509b1fc561a11d94aa6ab5);
+            
+    
+            var marker_8cbcb9a3543f9f66953ad7877ad1329d = L.marker(
+                [21.000572, 105.830624],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_aef5fc340d88796beee619f7c363aa54 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_17d6c133765a0bda71cd84b3bb28c9f8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8c4cbbb6e1462731f8c4a0a807effcc8 = $(`<div id="html_8c4cbbb6e1462731f8c4a0a807effcc8" style="width: 100.0%; height: 100.0%;">Bệnh viện Thẩm mỹ Kangnam Hàn Quốc</div>`)[0];
+                popup_17d6c133765a0bda71cd84b3bb28c9f8.setContent(html_8c4cbbb6e1462731f8c4a0a807effcc8);
+            
+        
+
+        marker_8cbcb9a3543f9f66953ad7877ad1329d.bindPopup(popup_17d6c133765a0bda71cd84b3bb28c9f8)
+        ;
+
+        
+    
+    
+                marker_8cbcb9a3543f9f66953ad7877ad1329d.setIcon(icon_aef5fc340d88796beee619f7c363aa54);
+            
+    
+            var marker_5f6d60ed92a6c4317a4033a576c5057f = L.marker(
+                [21.0002165, 105.8257561],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_4704419272c56a7399def118c8b6ac2f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5c09aa833ff7194dca22d97e81dd0af2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6c56914a6284a1c61a0c5c77ee53206a = $(`<div id="html_6c56914a6284a1c61a0c5c77ee53206a" style="width: 100.0%; height: 100.0%;">Viện Y học Phòng không - Không quân</div>`)[0];
+                popup_5c09aa833ff7194dca22d97e81dd0af2.setContent(html_6c56914a6284a1c61a0c5c77ee53206a);
+            
+        
+
+        marker_5f6d60ed92a6c4317a4033a576c5057f.bindPopup(popup_5c09aa833ff7194dca22d97e81dd0af2)
+        ;
+
+        
+    
+    
+                marker_5f6d60ed92a6c4317a4033a576c5057f.setIcon(icon_4704419272c56a7399def118c8b6ac2f);
+            
+    
+            var marker_89e5f4cd3afe576dd7b08c07822da3b6 = L.marker(
+                [21.0189013, 105.8064109],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_9f00712bc488c04691630612e65a43c4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e2e7a4c45ea03f9c910fd0a2eb994c2b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a0dc301a1bcc25a4d57a04027d1c5973 = $(`<div id="html_a0dc301a1bcc25a4d57a04027d1c5973" style="width: 100.0%; height: 100.0%;">Bệnh viện Thận Hà Nội</div>`)[0];
+                popup_e2e7a4c45ea03f9c910fd0a2eb994c2b.setContent(html_a0dc301a1bcc25a4d57a04027d1c5973);
+            
+        
+
+        marker_89e5f4cd3afe576dd7b08c07822da3b6.bindPopup(popup_e2e7a4c45ea03f9c910fd0a2eb994c2b)
+        ;
+
+        
+    
+    
+                marker_89e5f4cd3afe576dd7b08c07822da3b6.setIcon(icon_9f00712bc488c04691630612e65a43c4);
+            
+    
+            var marker_2dccec190fe4fec869e51701af8d1ab4 = L.marker(
+                [21.040858, 105.8460314],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_cf76ce1d061ad6d1f6b618cd08a66e08 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_de3b08a8794af6ae8b175184c86be893 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ca418bbc2a7458c6ec60c9062b269fce = $(`<div id="html_ca418bbc2a7458c6ec60c9062b269fce" style="width: 100.0%; height: 100.0%;">Bệnh viện Đa khoa Hoè Nhai</div>`)[0];
+                popup_de3b08a8794af6ae8b175184c86be893.setContent(html_ca418bbc2a7458c6ec60c9062b269fce);
+            
+        
+
+        marker_2dccec190fe4fec869e51701af8d1ab4.bindPopup(popup_de3b08a8794af6ae8b175184c86be893)
+        ;
+
+        
+    
+    
+                marker_2dccec190fe4fec869e51701af8d1ab4.setIcon(icon_cf76ce1d061ad6d1f6b618cd08a66e08);
+            
+    
+            var marker_b69732f2804b825b4e49a1a0ea08bb89 = L.marker(
+                [21.0165979, 105.8570629],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_8d7c1c7de6c49fc7e60ad0cd87fc4fd9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_012c0ece717249d0e000a5b5e9156664 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ae40b8961b6968fb1470027500b49d14 = $(`<div id="html_ae40b8961b6968fb1470027500b49d14" style="width: 100.0%; height: 100.0%;">Trung tâm Y tế quận Hai Bà Trưng</div>`)[0];
+                popup_012c0ece717249d0e000a5b5e9156664.setContent(html_ae40b8961b6968fb1470027500b49d14);
+            
+        
+
+        marker_b69732f2804b825b4e49a1a0ea08bb89.bindPopup(popup_012c0ece717249d0e000a5b5e9156664)
+        ;
+
+        
+    
+    
+                marker_b69732f2804b825b4e49a1a0ea08bb89.setIcon(icon_8d7c1c7de6c49fc7e60ad0cd87fc4fd9);
+            
+    
+            var marker_4e4a382352da691b10078b37647f126b = L.marker(
+                [21.0426295, 105.8396918],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_e67438973bab5ddd27bdd8aea8881107 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2cf8150002b2f7959229aadcc3344204 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_234e2c80395f7002f15f02696d13de7c = $(`<div id="html_234e2c80395f7002f15f02696d13de7c" style="width: 100.0%; height: 100.0%;">Trung tâm Y tế quận Ba Đình</div>`)[0];
+                popup_2cf8150002b2f7959229aadcc3344204.setContent(html_234e2c80395f7002f15f02696d13de7c);
+            
+        
+
+        marker_4e4a382352da691b10078b37647f126b.bindPopup(popup_2cf8150002b2f7959229aadcc3344204)
+        ;
+
+        
+    
+    
+                marker_4e4a382352da691b10078b37647f126b.setIcon(icon_e67438973bab5ddd27bdd8aea8881107);
+            
+    
+            var marker_4f046232fdf505e2922bad8a5627c272 = L.marker(
+                [21.0183636, 105.841644],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_b222643a0d5a1c8b5eed5ed2974654d3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_94552ecf4cefb36029be7f13b66cee58 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_91d62ab78a0e37d1b2110a67825ffe3e = $(`<div id="html_91d62ab78a0e37d1b2110a67825ffe3e" style="width: 100.0%; height: 100.0%;">Bệnh viện Đa khoa Hồng Phát</div>`)[0];
+                popup_94552ecf4cefb36029be7f13b66cee58.setContent(html_91d62ab78a0e37d1b2110a67825ffe3e);
+            
+        
+
+        marker_4f046232fdf505e2922bad8a5627c272.bindPopup(popup_94552ecf4cefb36029be7f13b66cee58)
+        ;
+
+        
+    
+    
+                marker_4f046232fdf505e2922bad8a5627c272.setIcon(icon_b222643a0d5a1c8b5eed5ed2974654d3);
+            
+    
+            var marker_1bc7a921dea6f363ea793317d504db7d = L.marker(
+                [21.014218, 105.8408994],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_45e7e7855f7cd8b483f6f93ea2e057ee = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b4d6f67bb5f82ee56d9a5ff66985e383 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9903450950405b4ffc3f49b58444fdba = $(`<div id="html_9903450950405b4ffc3f49b58444fdba" style="width: 100.0%; height: 100.0%;">Bệnh Viện Đức Phúc</div>`)[0];
+                popup_b4d6f67bb5f82ee56d9a5ff66985e383.setContent(html_9903450950405b4ffc3f49b58444fdba);
+            
+        
+
+        marker_1bc7a921dea6f363ea793317d504db7d.bindPopup(popup_b4d6f67bb5f82ee56d9a5ff66985e383)
+        ;
+
+        
+    
+    
+                marker_1bc7a921dea6f363ea793317d504db7d.setIcon(icon_45e7e7855f7cd8b483f6f93ea2e057ee);
+            
+    
+            var marker_18e64d959d53cc82e08a4d11bdc04c99 = L.marker(
+                [21.0112634, 105.8521234],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_741a1bb220f360ac69ea47cc3ddd8ce8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_429ed37d68191f5bdfef67cacf9536af = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c94a6e8fd43e831deeab04cf350a6e0e = $(`<div id="html_c94a6e8fd43e831deeab04cf350a6e0e" style="width: 100.0%; height: 100.0%;">Bệnh viện Bưu Điện</div>`)[0];
+                popup_429ed37d68191f5bdfef67cacf9536af.setContent(html_c94a6e8fd43e831deeab04cf350a6e0e);
+            
+        
+
+        marker_18e64d959d53cc82e08a4d11bdc04c99.bindPopup(popup_429ed37d68191f5bdfef67cacf9536af)
+        ;
+
+        
+    
+    
+                marker_18e64d959d53cc82e08a4d11bdc04c99.setIcon(icon_741a1bb220f360ac69ea47cc3ddd8ce8);
+            
+    
+            var marker_9dd30f330430ca0c402d07bb0e542654 = L.marker(
+                [21.0036321, 105.8404443],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_b2c8be582fe49475fc96af60a5eba344 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ba16af8b6222df9b4f6c8b23e6fff0ea = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4ba815ddaed5c6993777272ca62eefd1 = $(`<div id="html_4ba815ddaed5c6993777272ca62eefd1" style="width: 100.0%; height: 100.0%;">Bệnh viện Việt Pháp</div>`)[0];
+                popup_ba16af8b6222df9b4f6c8b23e6fff0ea.setContent(html_4ba815ddaed5c6993777272ca62eefd1);
+            
+        
+
+        marker_9dd30f330430ca0c402d07bb0e542654.bindPopup(popup_ba16af8b6222df9b4f6c8b23e6fff0ea)
+        ;
+
+        
+    
+    
+                marker_9dd30f330430ca0c402d07bb0e542654.setIcon(icon_b2c8be582fe49475fc96af60a5eba344);
+            
+    
+            var marker_8250ce3d74ddc15d3f45d6ee64fca61d = L.marker(
+                [21.0480654, 105.8103421],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_b491bcaa03c33373c60de78b9c23d087 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9fa9d164f1e330af81de2a98183d1e71 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d93292395613ad529d1a4ba3e0847fe8 = $(`<div id="html_d93292395613ad529d1a4ba3e0847fe8" style="width: 100.0%; height: 100.0%;">Trung tâm Y tế quận Tây Hồ</div>`)[0];
+                popup_9fa9d164f1e330af81de2a98183d1e71.setContent(html_d93292395613ad529d1a4ba3e0847fe8);
+            
+        
+
+        marker_8250ce3d74ddc15d3f45d6ee64fca61d.bindPopup(popup_9fa9d164f1e330af81de2a98183d1e71)
+        ;
+
+        
+    
+    
+                marker_8250ce3d74ddc15d3f45d6ee64fca61d.setIcon(icon_b491bcaa03c33373c60de78b9c23d087);
+            
+    
+            var marker_8f8e042b250d1714d51b47256bb07482 = L.marker(
+                [21.0036323, 105.8395966],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_5edb031e817adcdd3870477de573846c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_17a9a8dbfc404a1546819f9d3430257c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c86c57c2f5f216b720340ee177740fbd = $(`<div id="html_c86c57c2f5f216b720340ee177740fbd" style="width: 100.0%; height: 100.0%;">Bệnh viện Lão khoa Trung ương</div>`)[0];
+                popup_17a9a8dbfc404a1546819f9d3430257c.setContent(html_c86c57c2f5f216b720340ee177740fbd);
+            
+        
+
+        marker_8f8e042b250d1714d51b47256bb07482.bindPopup(popup_17a9a8dbfc404a1546819f9d3430257c)
+        ;
+
+        
+    
+    
+                marker_8f8e042b250d1714d51b47256bb07482.setIcon(icon_5edb031e817adcdd3870477de573846c);
+            
+    
+            var marker_d00d33dd453dd27e2c55787d9b15fd21 = L.marker(
+                [21.003801, 105.8387631],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_f61b9e3bdc3204db9ff5faaffbe72e5d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_db8f41e59ac7728458734fc73ac9bb61 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_746101b29e95d2edf9ebc780ee1aee30 = $(`<div id="html_746101b29e95d2edf9ebc780ee1aee30" style="width: 100.0%; height: 100.0%;">Bệnh viện Da liễu Trung ương</div>`)[0];
+                popup_db8f41e59ac7728458734fc73ac9bb61.setContent(html_746101b29e95d2edf9ebc780ee1aee30);
+            
+        
+
+        marker_d00d33dd453dd27e2c55787d9b15fd21.bindPopup(popup_db8f41e59ac7728458734fc73ac9bb61)
+        ;
+
+        
+    
+    
+                marker_d00d33dd453dd27e2c55787d9b15fd21.setIcon(icon_f61b9e3bdc3204db9ff5faaffbe72e5d);
+            
+    
+            var marker_a7492903da4d48d3f8feb236031cbc07 = L.marker(
+                [20.9996733, 105.8405781],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_a7cdff4cb6a06f3e8dffd35efb2e7726 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6280df658383daf832c88be16f778e13 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4f6e832714fb5851f494a8b76f238949 = $(`<div id="html_4f6e832714fb5851f494a8b76f238949" style="width: 100.0%; height: 100.0%;">Bệnh viện Tai-Mũi-Họng Trung ương</div>`)[0];
+                popup_6280df658383daf832c88be16f778e13.setContent(html_4f6e832714fb5851f494a8b76f238949);
+            
+        
+
+        marker_a7492903da4d48d3f8feb236031cbc07.bindPopup(popup_6280df658383daf832c88be16f778e13)
+        ;
+
+        
+    
+    
+                marker_a7492903da4d48d3f8feb236031cbc07.setIcon(icon_a7cdff4cb6a06f3e8dffd35efb2e7726);
+            
+    
+            var marker_24b09e2d0cbcee703556c85290ecc3a1 = L.marker(
+                [20.9959685, 105.8666473],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_36234ac0d392abfe37ca83b1cd0a6343 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_44bf1a3f04be2a7bfd87326e64e91ff2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_72eed9df5faeea90507347928d1b1bb7 = $(`<div id="html_72eed9df5faeea90507347928d1b1bb7" style="width: 100.0%; height: 100.0%;">Bệnh viện Đa khoa Quốc tế Vinmec Times City</div>`)[0];
+                popup_44bf1a3f04be2a7bfd87326e64e91ff2.setContent(html_72eed9df5faeea90507347928d1b1bb7);
+            
+        
+
+        marker_24b09e2d0cbcee703556c85290ecc3a1.bindPopup(popup_44bf1a3f04be2a7bfd87326e64e91ff2)
+        ;
+
+        
+    
+    
+                marker_24b09e2d0cbcee703556c85290ecc3a1.setIcon(icon_36234ac0d392abfe37ca83b1cd0a6343);
+            
+    
+            var marker_c4bc86ff698f5d6c64c7e76619f0a18b = L.marker(
+                [21.0121436, 105.8217867],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_47b1cd5ecce78cc0db00c261c5c2d4b0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fd37216e66345e83cd2687abf7da7e75 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ef19bdce5b06d38e3b0c841dbb091a8c = $(`<div id="html_ef19bdce5b06d38e3b0c841dbb091a8c" style="width: 100.0%; height: 100.0%;">Viện Y học dự phòng Quân đội</div>`)[0];
+                popup_fd37216e66345e83cd2687abf7da7e75.setContent(html_ef19bdce5b06d38e3b0c841dbb091a8c);
+            
+        
+
+        marker_c4bc86ff698f5d6c64c7e76619f0a18b.bindPopup(popup_fd37216e66345e83cd2687abf7da7e75)
+        ;
+
+        
+    
+    
+                marker_c4bc86ff698f5d6c64c7e76619f0a18b.setIcon(icon_47b1cd5ecce78cc0db00c261c5c2d4b0);
+            
+    
+            var marker_e8d02a289c8882cfe477f4193c25e0de = L.marker(
+                [21.0169494, 105.8332492],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_e609238f16b1b3d8c0bc378b3728ba0a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_35fc4a657705ac8363ce43e40bab0fcf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fafe5e894ac896ac37db5695bb7b298d = $(`<div id="html_fafe5e894ac896ac37db5695bb7b298d" style="width: 100.0%; height: 100.0%;">Nhà hộ sinh Đống Đa</div>`)[0];
+                popup_35fc4a657705ac8363ce43e40bab0fcf.setContent(html_fafe5e894ac896ac37db5695bb7b298d);
+            
+        
+
+        marker_e8d02a289c8882cfe477f4193c25e0de.bindPopup(popup_35fc4a657705ac8363ce43e40bab0fcf)
+        ;
+
+        
+    
+    
+                marker_e8d02a289c8882cfe477f4193c25e0de.setIcon(icon_e609238f16b1b3d8c0bc378b3728ba0a);
+            
+    
+            var marker_2a71c49aeeb8e4db34740ec475e1ed51 = L.marker(
+                [21.0110832, 105.8602894],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_1fa44126035ada159b66c3e55ba1c31e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e35e7d37c3135b764539317f6e705347 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e42f0003b860f613eb9a047fea775d8c = $(`<div id="html_e42f0003b860f613eb9a047fea775d8c" style="width: 100.0%; height: 100.0%;">Bệnh viện Phụ sản Hà Nội (cơ sở 2)</div>`)[0];
+                popup_e35e7d37c3135b764539317f6e705347.setContent(html_e42f0003b860f613eb9a047fea775d8c);
+            
+        
+
+        marker_2a71c49aeeb8e4db34740ec475e1ed51.bindPopup(popup_e35e7d37c3135b764539317f6e705347)
+        ;
+
+        
+    
+    
+                marker_2a71c49aeeb8e4db34740ec475e1ed51.setIcon(icon_1fa44126035ada159b66c3e55ba1c31e);
+            
+    
+            var marker_fc10d79dda9941538ca6ae3289c71d72 = L.marker(
+                [21.0256896, 105.8353259],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_55008ecd1b37d3ab8cb8fe31d9960aca = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2a9243b35b4a5291fadc81dbb7ab8e23 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_97988270a1b9234a3cfc376b60129a33 = $(`<div id="html_97988270a1b9234a3cfc376b60129a33" style="width: 100.0%; height: 100.0%;">Bệnh viện Đa khoa Tràng An</div>`)[0];
+                popup_2a9243b35b4a5291fadc81dbb7ab8e23.setContent(html_97988270a1b9234a3cfc376b60129a33);
+            
+        
+
+        marker_fc10d79dda9941538ca6ae3289c71d72.bindPopup(popup_2a9243b35b4a5291fadc81dbb7ab8e23)
+        ;
+
+        
+    
+    
+                marker_fc10d79dda9941538ca6ae3289c71d72.setIcon(icon_55008ecd1b37d3ab8cb8fe31d9960aca);
+            
+    
+            var marker_eb3665b52835bde4efc554f080627d1b = L.marker(
+                [21.0246213, 105.8502197],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_95735fb378a3852c4c4064899ec9c23f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e289142ff039bb5536a92d80f693f775 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ae67b39c1b77e283cd13f157b6c7935f = $(`<div id="html_ae67b39c1b77e283cd13f157b6c7935f" style="width: 100.0%; height: 100.0%;">Bệnh viện Việt Nam - Cuba</div>`)[0];
+                popup_e289142ff039bb5536a92d80f693f775.setContent(html_ae67b39c1b77e283cd13f157b6c7935f);
+            
+        
+
+        marker_eb3665b52835bde4efc554f080627d1b.bindPopup(popup_e289142ff039bb5536a92d80f693f775)
+        ;
+
+        
+    
+    
+                marker_eb3665b52835bde4efc554f080627d1b.setIcon(icon_95735fb378a3852c4c4064899ec9c23f);
+            
+    
+            var marker_b4d379bb025a31742749d20422b4846e = L.marker(
+                [21.0161461, 105.8482711],
+                {
+}
+            ).addTo(map_d4bf9cf2f7a8f4c4a2b2500f15abc9ff);
+        
+    
+            var icon_e2a416cd3c634aa84abcc40394e33662 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9947869e09c7e01a5c6bbb52ebbc93fd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e5a0187d07f64be70cc2bbf36ec0d4fc = $(`<div id="html_e5a0187d07f64be70cc2bbf36ec0d4fc" style="width: 100.0%; height: 100.0%;">Bệnh viện Y học cổ truyền Trung ương</div>`)[0];
+                popup_9947869e09c7e01a5c6bbb52ebbc93fd.setContent(html_e5a0187d07f64be70cc2bbf36ec0d4fc);
+            
+        
+
+        marker_b4d379bb025a31742749d20422b4846e.bindPopup(popup_9947869e09c7e01a5c6bbb52ebbc93fd)
+        ;
+
+        
+    
+    
+                marker_b4d379bb025a31742749d20422b4846e.setIcon(icon_e2a416cd3c634aa84abcc40394e33662);
+            
+</script>
+</html>
