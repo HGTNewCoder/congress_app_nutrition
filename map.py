@@ -1,33 +1,47 @@
 import os
 import requests
 import folium
-from geopy.geocoders import Nominatim
+from dotenv import load_dotenv 
+load_dotenv()
 
-
+# ───────────────────────────────────────────────
+# 1. GOOGLE GEOCODING API  (replace Nominatim)
+# ───────────────────────────────────────────────
 def get_coordinates(postal_code, country):
     """
     Convert a postal code into (latitude, longitude)
-    using OpenStreetMap's Nominatim service.
+    using Google Maps Geocoding API.
     """
     try:
-        geolocator = Nominatim(user_agent="global_zip_locator", timeout=10)
-        location = geolocator.geocode({"postalcode": postal_code, "country": country})
-        if location:
-            print(f"✅ Coordinates found for {postal_code}, {country}: ({location.latitude}, {location.longitude})")
-            return location.latitude, location.longitude
+        GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")  # store key in .env
+        if not GOOGLE_API_KEY:
+            raise ValueError("Missing Google API key. Set GOOGLE_API_KEY in environment.")
+
+        address = f"{postal_code}, {country}"
+        url = "https://maps.googleapis.com/maps/api/geocode/json"
+        params = {"address": address, "key": GOOGLE_API_KEY}
+        response = requests.get(url, params=params, timeout=10)
+        response.raise_for_status()
+        data = response.json()
+
+        if data["status"] == "OK" and data["results"]:
+            location = data["results"][0]["geometry"]["location"]
+            lat, lon = location["lat"], location["lng"]
+            print(f"✅ Coordinates found for {postal_code}, {country}: ({lat}, {lon})")
+            return lat, lon
         else:
-            print("⚠️ No coordinates found for that postal code.")
+            print(f"⚠️ Google API could not find coordinates: {data['status']}")
             return None, None
+
     except Exception as e:
         print(f"[ERROR] Geocoding failed: {e}")
         return None, None
 
 
+# ───────────────────────────────────────────────
+# 2. Retrieve nearby hospitals from OpenStreetMap
+# ───────────────────────────────────────────────
 def get_hospitals(lat, lon, radius=5000):
-    """
-    Retrieve hospitals near (lat, lon) within 'radius' meters.
-    Uses the Overpass API (OpenStreetMap).
-    """
     try:
         query = f"""
         [out:json][timeout:25];
@@ -55,18 +69,17 @@ def get_hospitals(lat, lon, radius=5000):
         return hospitals
 
     except requests.exceptions.Timeout:
-        print("[ERROR] Overpass API timed out. Try reducing radius or increasing timeout.")
+        print("[ERROR] Overpass API timed out.")
         return []
     except Exception as e:
         print(f"[ERROR] Failed to retrieve hospitals: {e}")
         return []
 
 
+# ───────────────────────────────────────────────
+# 3. Create map
+# ───────────────────────────────────────────────
 def create_map(lat, lon, hospitals, postal_code, country):
-    """
-    Build and save a Folium map centered on (lat, lon)
-    with hospital markers.
-    """
     try:
         fmap = folium.Map(location=[lat, lon], zoom_start=13, tiles="CartoDB positron")
 
@@ -75,7 +88,6 @@ def create_map(lat, lon, hospitals, postal_code, country):
             popup=f"{postal_code}, {country}\n(You are here)",
             icon=folium.Icon(color="blue", icon="home"),
         ).add_to(fmap)
-
 
         for h in hospitals:
             folium.Marker(
@@ -97,6 +109,9 @@ def create_map(lat, lon, hospitals, postal_code, country):
         return None
 
 
+# ───────────────────────────────────────────────
+# 4. Main
+# ───────────────────────────────────────────────
 if __name__ == "__main__":
     postal_code = input("Enter postal code: ").strip()
     country = input("Enter country name: ").strip()

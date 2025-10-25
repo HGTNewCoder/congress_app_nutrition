@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_ecb848d7c1535b85c6e09b7b4caec798 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_ecb848d7c1535b85c6e09b7b4caec798" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_ecb848d7c1535b85c6e09b7b4caec798 = L.map(
+                "map_ecb848d7c1535b85c6e09b7b4caec798",
+                {
+                    center: [49.28548259999999, -122.9887494],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_bec6d5dc279372ec6963ebdf206655bc = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_bec6d5dc279372ec6963ebdf206655bc.addTo(map_ecb848d7c1535b85c6e09b7b4caec798);
+        
+    
+            var marker_b8bd37c325bbb312ca34de6af475d615 = L.marker(
+                [49.28548259999999, -122.9887494],
+                {
+}
+            ).addTo(map_ecb848d7c1535b85c6e09b7b4caec798);
+        
+    
+            var icon_60301e71456ba7c8f6da04753a404add = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e0e38c78f12ff136e103734306b1bc97 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1f002c587aaf3781733f06a5eed4503e = $(`<div id="html_1f002c587aaf3781733f06a5eed4503e" style="width: 100.0%; height: 100.0%;">V5B1G7, Canada (You are here)</div>`)[0];
+                popup_e0e38c78f12ff136e103734306b1bc97.setContent(html_1f002c587aaf3781733f06a5eed4503e);
+            
+        
+
+        marker_b8bd37c325bbb312ca34de6af475d615.bindPopup(popup_e0e38c78f12ff136e103734306b1bc97)
+        ;
+
+        
+    
+    
+                marker_b8bd37c325bbb312ca34de6af475d615.setIcon(icon_60301e71456ba7c8f6da04753a404add);
+            
+    
+            var marker_5d4530e969d66a6e14e9ac4a3dc9eab2 = L.marker(
+                [49.3209784, -123.0676719],
+                {
+}
+            ).addTo(map_ecb848d7c1535b85c6e09b7b4caec798);
+        
+    
+            var icon_14632d45fa6480d4fd6927c08228892e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_32ee7ca279fde087ef050630cb020aa2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_20b99d216a96c164845668972979a9db = $(`<div id="html_20b99d216a96c164845668972979a9db" style="width: 100.0%; height: 100.0%;">Lions Gate Hospital</div>`)[0];
+                popup_32ee7ca279fde087ef050630cb020aa2.setContent(html_20b99d216a96c164845668972979a9db);
+            
+        
+
+        marker_5d4530e969d66a6e14e9ac4a3dc9eab2.bindPopup(popup_32ee7ca279fde087ef050630cb020aa2)
+        ;
+
+        
+    
+    
+                marker_5d4530e969d66a6e14e9ac4a3dc9eab2.setIcon(icon_14632d45fa6480d4fd6927c08228892e);
+            
+    
+            var marker_a76f878412b6dbe999e010d5ca3f21f7 = L.marker(
+                [49.2496764, -123.0154562],
+                {
+}
+            ).addTo(map_ecb848d7c1535b85c6e09b7b4caec798);
+        
+    
+            var icon_93add73ab578e17a5179fcb14e49bc26 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f71f106ea971d604f13b1a814229c538 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_014df4ffbeb5b2baf31947b95f8a3e9a = $(`<div id="html_014df4ffbeb5b2baf31947b95f8a3e9a" style="width: 100.0%; height: 100.0%;">Burnaby Hospital</div>`)[0];
+                popup_f71f106ea971d604f13b1a814229c538.setContent(html_014df4ffbeb5b2baf31947b95f8a3e9a);
+            
+        
+
+        marker_a76f878412b6dbe999e010d5ca3f21f7.bindPopup(popup_f71f106ea971d604f13b1a814229c538)
+        ;
+
+        
+    
+    
+                marker_a76f878412b6dbe999e010d5ca3f21f7.setIcon(icon_93add73ab578e17a5179fcb14e49bc26);
+            
+</script>
+</html>
