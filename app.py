@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, send_from_directory, jsonify, url_for
+from flask import Flask, render_template, request, send_from_directory, jsonify, url_for, render_template_string
 import os
 import csv
 from prompt import generate_food_exercise, generate_important, generate_routine
@@ -85,6 +85,12 @@ def about():
 @app.route("/map")
 def map():
     return render_template("map.html", page="map")
+
+@app.route("/view-output")
+def view_output():
+    with open("user_data.csv", "r") as f:
+        content = f.read()
+    return render_template_string("<pre>{{content}}</pre>", content=content)
 
 # -----------------------------------------------
 # Map search logic
