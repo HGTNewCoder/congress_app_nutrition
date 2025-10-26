@@ -75,37 +75,75 @@ my_llm_model = VertexAI(
 # Now fill the same structure with realistic, specific recommendations derived from {information}.
 # """
 
+# template_nutrition_food_exercise = """
+# You are a certified medical nutrition expert. 
+# Generate a concise HTML fragment (not a full page) with Food and Exercise recommendations based on: {information}.
+
+# Rules:
+# - Output must start with <section> and end with </section>.
+# - Use <span class="material-symbols-outlined">...</span> for each icon instead of <img>.
+# - Icons you can use:
+#   - restaurant, nutrition, local_drink, favorite, self_improvement, fitness_center, bedtime
+# - Do NOT include <html>, <head>, <body>, styles, or comments.
+
+# Example:
+# <section class="recommendation-section">
+#   <div class="recommendation-card">
+#     <h3 class="category-title">🥗 Food</h3>
+#     <ul class="recommendation-list">
+#       <li><span class="material-symbols-outlined">restaurant</span> Grilled salmon with vegetables</li>
+#       <li><span class="material-symbols-outlined">local_drink</span> Stay hydrated throughout the day</li>
+#     </ul>
+#   </div>
+#   <div class="recommendation-card">
+#     <h3 class="category-title">💪 Exercise</h3>
+#     <ul class="recommendation-list">
+#       <li><span class="material-symbols-outlined">favorite</span> Brisk walking 30 min</li>
+#       <li><span class="material-symbols-outlined">self_improvement</span> Morning yoga or stretching</li>
+#       <li><span class="material-symbols-outlined">bedtime</span> Adequate rest and recovery</li>
+#     </ul>
+#   </div>
+# </section>
+# """
+
 template_nutrition_food_exercise = """
 You are a certified medical nutrition expert. 
-Generate a concise HTML fragment (not a full page) with Food and Exercise recommendations based on: {information}.
+Generate a concise, well-structured HTML fragment (not a full page) with Food and Exercise recommendations based on: {information}.
 
 Rules:
 - Output must start with <section> and end with </section>.
-- Use <span class="material-symbols-outlined">...</span> for each icon instead of <img>.
-- Icons you can use:
-  - restaurant, nutrition, local_drink, favorite, self_improvement, fitness_center, bedtime
-- Do NOT include <html>, <head>, <body>, styles, or comments.
+- Use <span class="material-symbols-outlined">...</span> for each icon (no <img> or emoji).
+- Allowed icons: restaurant, nutrition, local_drink, favorite, self_improvement, fitness_center, bedtime.
+- Two parts required: 🥗 Food and 💪 Exercise.
+- Each part uses <div class="recommendation-card"> with a <ul class="recommendation-list">.
+- Keep HTML clean: no inline CSS, comments, or extra explanations.
+- Write realistic, practical recommendations (5 items per list max).
+- Keep tone professional and consistent.
 
-Example:
+Format Example:
 <section class="recommendation-section">
   <div class="recommendation-card">
     <h3 class="category-title">🥗 Food</h3>
     <ul class="recommendation-list">
       <li><span class="material-symbols-outlined">restaurant</span> Grilled salmon with vegetables</li>
-      <li><span class="material-symbols-outlined">local_drink</span> Stay hydrated throughout the day</li>
+      <li><span class="material-symbols-outlined">local_drink</span> Drink at least 2 liters of water daily</li>
+      <li><span class="material-symbols-outlined">nutrition</span> Include high-fiber grains in breakfast</li>
     </ul>
   </div>
+
   <div class="recommendation-card">
     <h3 class="category-title">💪 Exercise</h3>
     <ul class="recommendation-list">
-      <li><span class="material-symbols-outlined">favorite</span> Brisk walking 30 min</li>
-      <li><span class="material-symbols-outlined">self_improvement</span> Morning yoga or stretching</li>
-      <li><span class="material-symbols-outlined">bedtime</span> Adequate rest and recovery</li>
+      <li><span class="material-symbols-outlined">favorite</span> Brisk walking for 30 minutes daily</li>
+      <li><span class="material-symbols-outlined">self_improvement</span> Stretching or yoga after waking up</li>
+      <li><span class="material-symbols-outlined">fitness_center</span> Light resistance training twice a week</li>
+      <li><span class="material-symbols-outlined">bedtime</span> Maintain 7–9 hours of quality sleep</li>
     </ul>
   </div>
 </section>
-"""
 
+Now generate your own HTML fragment following this structure and style using the provided {information}.
+"""
 
 prompt_nutrition_food_exercise = PromptTemplate( 
     input_variables=["information"], 

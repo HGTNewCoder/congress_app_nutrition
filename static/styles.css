@@ -446,6 +446,18 @@ h2 {
   background-color: #f1f7fb;
   transition: 0.2s ease-in-out;
 }
+/* Material Symbols support */
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined');
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+  font-size: 22px;
+  color: #3C8DAD;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+/* Layout */
 .recommendation-section {
   display: flex;
   flex-wrap: wrap;
@@ -498,21 +510,4 @@ h2 {
 
 .recommendation-list li:hover {
   background: #e8f4fb;
-}
-
-.item-icon {
-  width: 24px;
-  height: 24px;
-  margin-right: 10px;
-  vertical-align: middle;
-  border-radius: 4px;
-  object-fit: contain;
-}
-
-.material-symbols-outlined {
-  font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 24;
-  font-size: 24px;
-  color: #2c3e50;
-  margin-right: 8px;
-  vertical-align: middle;
 }
