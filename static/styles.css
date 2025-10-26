@@ -352,3 +352,167 @@ h2 {
     border: 3px solid #eee; /* Optional: adds a light border */
     margin-bottom: 15px;    /* Adds space below the image */
 }
+
+/* Base wrapper */
+.routine-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-family: 'Noto Sans', sans-serif;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+/* Caption */
+.routine-table caption {
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding: 12px;
+  color: #2C3E50;
+  background: linear-gradient(90deg, #5CB8E4, #3C8DAD);
+  color: white;
+}
+
+/* Headers */
+.routine-table thead {
+  background: #F1F7FC;
+}
+
+.routine-table th {
+  padding: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #2c3e50;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+/* Cells */
+.routine-table td {
+  padding: 14px;
+  border-bottom: 1px solid #f0f0f0;
+  color: #34495e;
+}
+
+/* Alternate row color */
+.routine-table tbody tr:nth-child(even) {
+  background-color: #f9fcfe;
+}
+
+/* Hover highlight */
+.routine-table tbody tr:hover {
+  background-color: #e8f4fb;
+  transition: background 0.2s ease;
+}
+
+/* Key activities */
+.routine-table .highlight-row {
+  background-color: #fff4d6;
+  font-weight: 500;
+}
+
+/* Responsive layout */
+@media (max-width: 700px) {
+  .routine-table th, .routine-table td {
+    display: block;
+    text-align: left;
+  }
+  .routine-table thead {
+    display: none;
+  }
+  .routine-table tr {
+    margin-bottom: 15px;
+    display: block;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  }
+  .routine-table td {
+    padding: 10px 15px;
+    border: none;
+  }
+  .routine-table td::before {
+    content: attr(data-label);
+    display: block;
+    font-weight: 600;
+    color: #5CB8E4;
+    margin-bottom: 4px;
+  }
+}
+
+.routine-table tbody tr:hover {
+  background-color: #f1f7fb;
+  transition: 0.2s ease-in-out;
+}
+.recommendation-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  padding: 20px;
+}
+
+.recommendation-card {
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  padding: 24px 28px;
+  width: 320px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.recommendation-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.category-title {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 14px;
+}
+
+.recommendation-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.recommendation-list li {
+  display: flex;
+  align-items: center;
+  background: #f6f9fc;
+  margin: 8px 0;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 0.95rem;
+  color: #34495e;
+  transition: background 0.2s ease;
+}
+
+.recommendation-list li:hover {
+  background: #e8f4fb;
+}
+
+.item-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  vertical-align: middle;
+  border-radius: 4px;
+  object-fit: contain;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+  font-size: 24px;
+  color: #2c3e50;
+  margin-right: 8px;
+  vertical-align: middle;
+}
