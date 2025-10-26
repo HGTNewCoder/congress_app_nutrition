@@ -113,7 +113,7 @@ Generate a concise, well-structured HTML fragment (not a full page) with Food an
 Rules:
 - Output must start with <section> and end with </section>.
 - Use <span class="material-symbols-outlined">...</span> for each icon (no <img> or emoji).
-- Allowed icons: restaurant, nutrition, local_drink, favorite, self_improvement, fitness_center, bedtime.
+- Allowed icons: restaurant, nutrition, local_drink, favorite, relax, fitness_center, bedtime.
 - Two parts required: 🥗 Food and 💪 Exercise.
 - Each part uses <div class="recommendation-card"> with a <ul class="recommendation-list">.
 - Keep HTML clean: no inline CSS, comments, or extra explanations.
@@ -135,7 +135,7 @@ Format Example:
     <h3 class="category-title">💪 Exercise</h3>
     <ul class="recommendation-list">
       <li><span class="material-symbols-outlined">favorite</span> Brisk walking for 30 minutes daily</li>
-      <li><span class="material-symbols-outlined">self_improvement</span> Stretching or yoga after waking up</li>
+    #   <li><span class="material-symbols-outlined">relax</span> Stretching or yoga after waking up</li>
       <li><span class="material-symbols-outlined">fitness_center</span> Light resistance training twice a week</li>
       <li><span class="material-symbols-outlined">bedtime</span> Maintain 7–9 hours of quality sleep</li>
     </ul>
@@ -151,43 +151,6 @@ prompt_nutrition_food_exercise = PromptTemplate(
 ) 
 
 nutrition_food_exercise_chain = LLMChain(llm=my_llm_model, prompt=prompt_nutrition_food_exercise) 
-
-# template_routine = """
-# You are a medical nutrition and fitness expert. 
-# Generate a visually aesthetic HTML fragment (not a full HTML page) that shows a daily routine table from 5–6 AM to 10–11 PM 
-# based on {list_of_food_and_exercise}.
-
-# **Rules:**
-# 1. Output must start directly with <table> and end directly with </table>. No <html>, <head>, <body>, or <style> tags.
-# 2. The table must contain two columns: "Time" and "Activity".
-# 3. Use clean semantic HTML — no inline CSS, no comments, no extra text.
-# 4. Keep the structure simple and responsive-ready (use <thead> and <tbody>).
-# 5. Do not include notes, recommendations, or explanations.
-
-# Format the HTML fragment exactly like this:
-
-# <table class="routine-table">
-#   <caption>🌞 Daily Routine</caption>
-#   <thead>
-#     <tr>
-#       <th>Time</th>
-#       <th>Activity</th>
-#     </tr>
-#   </thead>
-#   <tbody>
-#     <tr>
-#       <td>5:00 AM - 6:00 AM</td>
-#       <td>Morning jog and stretching</td>
-#     </tr>
-#     <tr>
-#       <td>6:00 AM - 7:00 AM</td>
-#       <td>Breakfast: oatmeal and fruits</td>
-#     </tr>
-#   </tbody>
-# </table>
-
-# Now generate your own table following this exact format using {list_of_food_and_exercise}.
-# """
 
 template_routine = """
 You are a medical nutrition and fitness expert. 
