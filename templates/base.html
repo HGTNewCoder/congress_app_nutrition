@@ -16,7 +16,7 @@
       left: 0;
       width: 100%;
       height: 80px;
-      background: rgba(0, 0, 0, 0.3);
+      background:#92dff3;
       backdrop-filter: blur(8px);
       color: white;
       display: flex;
@@ -27,7 +27,7 @@
       transition: background 0.3s ease;
     }
     .topbar.scrolled {
-      background: rgba(0, 0, 0, 0.7);
+      background: #92dff3;
       backdrop-filter: blur(10px);
     }
 
@@ -64,7 +64,7 @@
 
     .content { margin-top: 0; padding: 0; }
 
-    .bg1, .bg2, .bg3, .bg4 {
+    .bg1, .bg2, .bg3 {
       height: 100vh;
       background-size: cover;
       background-position: center;
@@ -74,13 +74,25 @@
       align-items: center;
       justify-content: center;
     }
-    .bg1 { background-image: url("{{ url_for('static', filename='background.png') }}"); }
-    .bg2 { background-image: url("{{ url_for('static', filename='background2.png') }}"); }
-    .bg3 { background-image: url("{{ url_for('static', filename='background3.png') }}"); }
-    .bg4 { background-image: url("{{ url_for('static', filename='background4.png') }}"); }
+
+
+    .bg4 {
+      height: 70vh;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .bg1 { background-image: url("{{ url_for('static', filename='background.jpg') }}"); }
+    .bg2 { background-image: url("{{ url_for('static', filename='background2.jpg') }}"); }
+    .bg3 { background-image: url("{{ url_for('static', filename='background3.jpg') }}"); }
+    .bg4 { background-image: url("{{ url_for('static', filename='background4.jpg') }}"); }
 
     .title-box {
-      background: rgba(0, 0, 0, 0.85);
+      background:#7ad7f0;
       color: white;
       padding: 20px 40px;
       text-align: center;
@@ -155,9 +167,6 @@
       <a href="{{ url_for('home') }}">
         <img src="{{ url_for('static', filename='logo.png') }}" alt="Live Healthy logo" />
       </a>
-      <a href="https://www.myadcs.com/" class="adcs-logo" target="_blank">
-        <img src="{{ url_for('static', filename='logo1.png') }}" alt="ADCS logo" />
-      </a>
     </div>
 
     <nav class="topbar-links">
@@ -212,7 +221,7 @@
 
     <section class="white-section">
       <h1>Goal</h1>
-      <p>My app was created to solve this both problem . It helps users find clear and summarized health information so they can understand what is right for their condition without wasting time or money.</p> 
+      <p>Our app was created to solve this both problem . It helps users find clear and summarized health information so they can understand what is right for their condition without wasting time or money.</p> 
       <p>The app collects trusted medical and nutrition data, then summarizes it in simple language. Users can enter their disease name, and the app will instantly show food suggestions, daily tips, and explanations. It removes the need to visit many websites or pay for expert advice. Not only,everyone can access it freely—students, workers, or families in poor areas. But aslo,my app turns complex health information into something simple, fast, and free—because everyone deserves to understand how to take care of their health.</p> 
       <p>What makes my app special is its goal of equality. Many people cannot afford expensive medical consultations, but knowledge should not belong only to the rich. By making accurate health guidance free and easy to understand, my app gives everyone a fair chance to care for their body and live healthier.</p>
     </section>
