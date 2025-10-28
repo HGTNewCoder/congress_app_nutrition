@@ -86,10 +86,3 @@ Open the templates in `templates/` to see exact route names if any custom routes
 - Add a minimal `.env.example` file showing required environment variables (without secrets).
 
 ---
-
-If you'd like, I can also:
-- Add a `.env.example` file to the repo
-- Add a short note to `.gitignore` to ensure `key.json` and `.venv/` are ignored
-- Add a minimal `README` section that lists exact Flask commands if `app.py` uses a custom runner
-
-If you'd like any of those follow-ups, tell me which and I will apply them.
