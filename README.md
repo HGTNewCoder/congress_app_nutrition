@@ -4,8 +4,7 @@ A minimal Flask app for looking up local health and nutrition information. The p
 
 ## Prerequisites
 - Python 3.8+ (3.10+ recommended)
-- Git (optional)
-- Google Cloud project + API key and service account JSON (optional — required for features that call Google Cloud services)
+- Google Cloud project + API key and service account JSON (required for features that call Google Cloud services)
 
 ## Quick start (Windows PowerShell)
 
@@ -25,7 +24,7 @@ pip install -r requirements.txt
 python app.py
 ```
 
-The app will start on the default Flask port (5000) unless `app.py` sets a different host/port. Open http://127.0.0.1:5000 in your browser.
+Open http://127.0.0.1:10000 in your browser.
 
 If PowerShell blocks script execution when activating the venv, you can temporarily allow local scripts in your user scope:
 
